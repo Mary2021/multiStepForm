@@ -1,6 +1,6 @@
 ### Screenshot
 
-![](./images/desktop-design-step-a.jpg)
+![](./images/desktop-design-step-1.jpg)
 
 # Getting Started with Create React App
 
