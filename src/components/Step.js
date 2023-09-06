@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from 'reactstrap';
 
-function App() {
+function Step() {
   return (
     <div>
       <CardImg
@@ -56,4 +56,4 @@ function App() {
   );
 }
 
-export default App;
+export default Step;
