@@ -1,66 +1,20 @@
-import './App.css';
-import { 
-  Badge, 
+import '../App.css';
+import Step from './Step';
+import {  
   Button, 
-  Card, 
-  CardImg, 
-  CardImgOverlay, 
-  CardText, 
-  CardTitle, 
+  Card,  
   Form, 
   FormGroup, 
   Input, 
   Label 
 } from 'reactstrap';
 
-
 function App() {
   return (
     <div className="App">
       <main>
         <Card inverse className='formContainer'>
-          <CardImg
-            alt="Card image cap"
-            src="./images/bg-sidebar-desktop.svg"
-          />
-          <CardImgOverlay>
-            <Badge>
-              1
-            </Badge>
-            <CardTitle tag="h6">
-              Step 1
-            </CardTitle>
-            <CardText>
-              Your info
-            </CardText>
-            <Badge>
-              2
-            </Badge>
-            <CardTitle tag="h6">
-              Step 2
-            </CardTitle>
-            <CardText>
-              Select plan
-            </CardText>
-            <Badge>
-              3
-            </Badge>
-            <CardTitle tag="h6">
-              Step 3
-            </CardTitle>
-            <CardText>
-              Add-ons
-            </CardText>
-            <Badge>
-              4
-            </Badge>
-            <CardTitle tag="h6">
-              Step 4
-            </CardTitle>
-            <CardText>
-              Summary
-            </CardText>
-          </CardImgOverlay>
+        <Step />
           <Form className='col-7 pt-5 px-5 mx-5'>
             <h2 className='formTitle'>Personal info</h2>
             <p className='formText'>Please provide your name, email address, and phone number.</p>

@@ -17,7 +17,7 @@
 
 .sideBar{
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
   height: 100%;
@@ -26,7 +26,7 @@
 }
 
 .card-img {
-  width: 30%;
+  width: 100%;
 }
 
 .card-img-overlay {
@@ -65,7 +65,7 @@
 
 .formArea {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
   margin-top: 5%;
@@ -89,7 +89,7 @@
 
 .btn {
   position: relative;
-  top: 25%;
+  top: 15%;
   left:75%;
   padding-top: 2%;
   padding-bottom: 2%;
