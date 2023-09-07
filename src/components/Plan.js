@@ -1,9 +1,8 @@
 import '../App.css';
-import Step from './Step';
 
 function Plan() {
     return (
-        <Step />
+        <p className='formText'>Step 2</p>
     );
 }
 

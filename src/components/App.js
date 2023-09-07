@@ -1,64 +1,79 @@
 import '../App.css';
-import Step from './Step';
-import {  
-  Button, 
-  Card,  
-  Form, 
-  FormGroup, 
-  Input, 
-  Label 
-} from 'reactstrap';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Steps from './Steps';
+import PersonalInfo from './PersonalInfo';
+import Plan from './Plan';
+import AddOns from './AddOns';
+import Summary from './Summary';
+import { Card } from 'reactstrap';
 
 function App() {
+  return (
+    <Router>
+      < Routes >
+        <Route path="/" element={<Info />}>
+        </Route>
+        <Route path="/plan" element={<SelectPlan />}>
+        </Route>
+        <Route path="/addOns" element={<PickAddOns />}>
+        </Route>
+        <Route path="/summary" element={<Sum />}>
+        </Route>
+      </Routes >
+    </Router>
+  )
+}
+
+function Info() {
   return (
     <div className="App">
       <main>
         <Card inverse className='formContainer'>
-        <Step />
-          <Form className='col-7 pt-5 px-5 mx-5'>
-            <h2 className='formTitle'>Personal info</h2>
-            <p className='formText'>Please provide your name, email address, and phone number.</p>
-            <FormGroup>
-              <Label for="exampleName">
-                Name
-              </Label>
-              <Input
-                id="exampleName"
-                name="name"
-                placeholder="e.g. Stephen King"
-                type="name"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="exampleEmail">
-                Email Address
-              </Label>
-              <Input
-                id="exampleEmail"
-                name="email"
-                placeholder="e.g. stephenking@lorem.com"
-                type="email"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="examplePhone">
-                Phone Number
-              </Label>
-              <Input
-                id="examplePhone"
-                name="phone"
-                placeholder="e.g. +1 234 567 890"
-                type="phone"
-              />
-            </FormGroup>
-            <Button>
-              Next Step
-            </Button>
-          </Form>
+          <Steps />
+          <PersonalInfo />
         </Card>
       </main>
     </div>
-  );
+  )
+}
+
+function SelectPlan() {
+  return (
+    <div className="App">
+      <main>
+        <Card inverse className='formContainer'>
+          <Steps />
+          <Plan />
+        </Card>
+      </main>
+    </div>
+  )
+}
+
+function PickAddOns() {
+  return (
+    <div className="App">
+      <main>
+        <Card inverse className='formContainer'>
+          <Steps />
+          <AddOns />
+        </Card>
+      </main>
+    </div>
+  )
+}
+
+function Sum() {
+  return (
+    <div className="App">
+      <main>
+        <Card inverse className='formContainer'>
+          <Steps />
+          <Summary />
+        </Card>
+      </main>
+    </div>
+  )
 }
 
 export default App;
