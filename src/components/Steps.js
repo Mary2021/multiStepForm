@@ -5,11 +5,12 @@ import {
   CardImgOverlay,
   CardText,
   CardTitle,
+  Container,
 } from 'reactstrap';
 
 function Step() {
   return (
-    <div>
+    <Container className='p-0'>
       <CardImg
         alt="Card image cap"
         src="../images/bg-sidebar-desktop.svg"
@@ -52,7 +53,7 @@ function Step() {
           Summary
         </CardText>
       </CardImgOverlay>
-    </div>
+    </Container>
   );
 }
 

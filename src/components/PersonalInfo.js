@@ -6,9 +6,7 @@ import {
     Input,
     Label
   } from 'reactstrap';
-  import {
-Link
-  } from "react-router-dom";
+  import { Link } from "react-router-dom";
 
 function Info() {
     return (
@@ -48,12 +46,13 @@ function Info() {
             type="phone"
           />
         </FormGroup>
+        <FormGroup className='nextBtnCol'>
         <Button>
           <Link to="/plan">
             Next Step
           </Link>
         </Button>
-
+        </FormGroup>
       </Form>
     );
 }
