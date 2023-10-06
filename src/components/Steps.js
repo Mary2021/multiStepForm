@@ -8,9 +8,9 @@ import {
   Container,
 } from 'reactstrap';
 
-function Step() {
+export default function Step() {
   return (
-    <Container className='p-0'>
+    <Container className='m-0 p-0'>
       <CardImg
         alt="Card image cap"
         src="../images/bg-sidebar-desktop.svg"
@@ -56,5 +56,3 @@ function Step() {
     </Container>
   );
 }
-
-export default Step;

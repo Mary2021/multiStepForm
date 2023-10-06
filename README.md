@@ -1,6 +1,11 @@
 https://reactrouter.com/en/v6.3.0/getting-started/overview
 https://stackoverflow.com/questions/54103302/react-toggle-active-class-between-multiple-reactstrap-buttons 
 
+https://www.freecodecamp.org/news/how-to-create-forms-in-react-using-react-hook-form/ 
+https://stackoverflow.com/questions/66588407/react-hooks-form-conflict-with-reactstrap
+https://6-4-0--reactstrap.netlify.app/components/form/
+https://react-hook-form.com/get-started#IntegratingControlledInputs 
+
 ### Screenshot
 
 ![](./public/images/desktop-design-step-1.jpg)

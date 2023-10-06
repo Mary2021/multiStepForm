@@ -1,3 +1,4 @@
+import React from 'react';
 import '../App.css';
 import {
     Button,
@@ -8,9 +9,9 @@ import {
   } from 'reactstrap';
   import { Link } from "react-router-dom";
 
-function Info() {
+export default function Info() {
     return (
-        <Form className='col-7 pt-5 px-5 mx-5'>
+        <Form className='pt-5 px-5 mx-5'>
         <h2 className='formTitle'>Personal info</h2>
         <p className='formText'>Please provide your name, email address, and phone number.</p>
         <FormGroup>
@@ -22,6 +23,7 @@ function Info() {
             name="name"
             placeholder="e.g. Stephen King"
             type="name"
+            autoComplete="given-name"
           />
         </FormGroup>
         <FormGroup>
@@ -33,6 +35,7 @@ function Info() {
             name="email"
             placeholder="e.g. stephenking@lorem.com"
             type="email"
+            autoComplete="email"
           />
         </FormGroup>
         <FormGroup>
@@ -44,6 +47,7 @@ function Info() {
             name="phone"
             placeholder="e.g. +1 234 567 890"
             type="phone"
+            autoComplete="tel"
           />
         </FormGroup>
         <FormGroup className='nextBtnCol'>
@@ -56,5 +60,3 @@ function Info() {
       </Form>
     );
 }
-
-export default Info;

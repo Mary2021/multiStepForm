@@ -1,11 +1,12 @@
-import { Button, Col, Container, FormGroup, Input, Row } from 'reactstrap';
+import React from 'react';
+import { Button, Col, Form, FormGroup, Input, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-function AddOns() {
+export default function AddOns() {
 
     return (
-        <Container className='col-7 pt-5 px-5 mx-5'>
+        <Form className='pt-5 px-5 mx-5'>
             <h2 className='formTitle'>Pick add-ons</h2>
             <p className='formText'>Add-ons help to enhance your gaming experience.</p>
                 <Col className='d-grid gap-2'>
@@ -14,7 +15,7 @@ function AddOns() {
                             <Col className='col-1'>
                                 <FormGroup check>
                                     <Input
-                                        id="checkbox2"
+                                        id="checkbox1"
                                         type="checkbox"
                                     />
                                 </FormGroup>
@@ -54,7 +55,7 @@ function AddOns() {
                             <Col className='col-1'>
                                 <FormGroup check>
                                     <Input
-                                        id="checkbox2"
+                                        id="checkbox3"
                                         type="checkbox"
                                     />
                                 </FormGroup>
@@ -86,8 +87,6 @@ function AddOns() {
                         </Button>
                     </Col>
                 </Row>
-        </Container >
+        </Form >
     );
 }
-
-export default AddOns;

@@ -1,3 +1,4 @@
+import React from 'react';
 import '../App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Steps from './Steps';
@@ -5,12 +6,60 @@ import PersonalInfo from './PersonalInfo';
 import Plan from './Plan';
 import AddOns from './AddOns';
 import Summary from './Summary';
-import { Card } from 'reactstrap';
+import { Card, Container, Row, Col } from 'reactstrap';
 
-function App() {
+function debounce(fn, ms) {
+  let timer
+  return _ => {
+    clearTimeout(timer)
+    timer = setTimeout(_ => {
+      timer = null
+      fn.apply(this, arguments)
+    }, ms)
+  };
+}
+
+export default function App() {
+
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
+  React.useEffect(() => {
+    const debouncedHandleResize = debounce(function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+    }, 1000)
+
+    window.addEventListener('resize', debouncedHandleResize)
+
+    return _ => {
+      window.removeEventListener('resize', debouncedHandleResize)
+
+    }
+  })
+
+  console.log(window.innerWidth)
+  console.log(dimensions.width)
+  console.log(dimensions.height)
+
+
+  function isMobile() {
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    return regex.test(navigator.userAgent);
+  }
+
+  if (isMobile()) {
+    console.log("Mobile device detected");
+  } else {
+    console.log("Desktop device detected");
+  }
+
   return (
     <Router>
-      < Routes >
+      <Routes>
         <Route path="/" element={<Info />}>
         </Route>
         <Route path="/plan" element={<SelectPlan />}>
@@ -19,19 +68,28 @@ function App() {
         </Route>
         <Route path="/summary" element={<Sum />}>
         </Route>
-      </Routes >
+      </Routes>
     </Router>
   )
 }
 
 function Info() {
+
   return (
     <div className="App">
       <main>
-        <Card inverse className='formContainer'>
-          <Steps />
-          <PersonalInfo />
-        </Card>
+        <Container className='p-0'>
+          <Row>
+            <Card inverse className='formContainer'>
+              <Col sm='4'>
+                <Steps />
+              </Col>
+              <Col sm='8'>
+                <PersonalInfo />
+              </Col>
+            </Card>
+          </Row>
+        </Container>
       </main>
     </div>
   )
@@ -41,10 +99,18 @@ function SelectPlan() {
   return (
     <div className="App">
       <main>
-        <Card inverse className='formContainer'>
-          <Steps />
-          <Plan />
-        </Card>
+        <Container className='p-0'>
+          <Row>
+            <Card inverse className='formContainer'>
+              <Col sm='4'>
+                <Steps />
+              </Col>
+              <Col sm='8'>
+                <Plan />
+              </Col>
+            </Card>
+          </Row>
+        </Container>
       </main>
     </div>
   )
@@ -54,10 +120,18 @@ function PickAddOns() {
   return (
     <div className="App">
       <main>
-        <Card inverse className='formContainer'>
-          <Steps />
-          <AddOns />
-        </Card>
+        <Container className='p-0'>
+          <Row>
+            <Card inverse className='formContainer'>
+              <Col sm='4'>
+                <Steps />
+              </Col>
+              <Col sm='8'>
+                <AddOns />
+              </Col>
+            </Card>
+          </Row>
+        </Container>
       </main>
     </div>
   )
@@ -67,13 +141,19 @@ function Sum() {
   return (
     <div className="App">
       <main>
-        <Card inverse className='formContainer'>
-          <Steps />
-          <Summary />
-        </Card>
+        <Container className='p-0'>
+          <Row>
+            <Card inverse className='formContainer'>
+              <Col sm='4'>
+                <Steps />
+              </Col>
+              <Col sm='8'>
+                <Summary />
+              </Col>
+            </Card>
+          </Row>
+        </Container>
       </main>
     </div>
   )
 }
-
-export default App;

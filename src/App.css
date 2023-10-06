@@ -33,6 +33,7 @@
   text-align: start;
   top: 10%;
   left: 10%;
+  width: 40%;
 }
 
 .badge {
@@ -91,8 +92,8 @@
   position: relative;
   padding-top: 2%;
   padding-bottom: 2%;
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-left: 1%;
+  padding-right: 1%;
   background-color: hsl(213, 96%, 18%);
   border-color: hsl(213, 96%, 18%);
 }
@@ -102,22 +103,30 @@
   color: hsl(0, 0%, 100%);
 }
 
-/* .form-check-input:checked {
+/* .form-switch .form-check-input:checked {
+  background-position: right center !important;
+}
+
+.form-switch .form-check-input:default {
   background-position: left center !important;
-} */
+}
 
 .form-switch .form-check-input {
 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e")
 }
 
-.form-check-input {
+.form-switch .form-check-input:checked, .form-check-input:default {
   background-color: hsl(213, 96%, 18%);
-}
+} */
 
 .planBtn {
   border: solid;
   background-color: hsl(0, 0%, 100%);
   border-color: hsl(213, 96%, 18%);
+}
+
+.planFormGrp {
+  padding-left: 0%;
 }
 
 .planToggle {
