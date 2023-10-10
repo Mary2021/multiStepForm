@@ -1,99 +1,93 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
-import { Button, Col, Form, FormGroup, Input, Label, Row } from 'reactstrap';
+import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from 'reactstrap';
 
 export default function Plan(props) {
-
-    // const [billingOption, setBillingOption] = 'monthly';
-    // //'monthly' ? 'checked': null;
-    // let style = "background-position: 'left center'";
-    // let handleToggle = () => {
-    //     setBillingOption = billingOption === 'monthly' ? 'yearly' : 'monthly';
-    //     style = "background-position: 'right center'";
-    // }
-    const [state, setState] = useState(true);
-
-    // const onChangeHandler = event => {
-    //     console.log(event)
-    //     setState(event.target.checked);
-    // };
-
-    // const handleSubmit = (e) => {
-    //     //e.preventDefault()
-    //     console.log(state) //working
-    // }
-
-    //onSubmit={(e) => handleSubmit(e)}
-
     return (
-        <Form className='pt-5 px-5 mx-5'>
-            <h2 className='formTitle'>Select your plan</h2>
-            <p className='formText'>You have the option of monthly or yearly billing.</p>
-            <FormGroup>
+        <Form className='py-5 px-5 mx-5 h-100'>
+            <Container className='px-0'>
+                <h2 className='formTitle'>Select your plan</h2>
+                <p className='formText'>You have the option of monthly or yearly billing.</p>
+            </Container>
+            <FormGroup check className='px-0 pt-4 pb-4'>
                 <Row>
-                    <Col>
+                    <Col className='col-4'>
                         <Button className='planBtn' outline>
-                            <img
-                                alt="icon-arcade"
-                                src="../images/icon-arcade.svg"
-                            />
-                            <h5>Arcade</h5>
-                            <p>$9/mo</p>
+                            <Container className='pt-2 text-start'>
+                                <img
+                                    alt="icon-arcade"
+                                    src="../images/icon-arcade.svg"
+                                />
+                            </Container>
+                            <Container className='pt-5 ps-2 text-start'>
+                                <h5>Arcade</h5>
+                                <p>$9/mo</p>
+                            </Container>
                         </Button>
                         {' '}
                     </Col>
-                    <Col>
+                    <Col className='col-4'>
                         <Button className='planBtn' outline>
-                            <img
-                                alt="icon-advanced"
-                                src="../images/icon-advanced.svg"
-                            />
-                            <h5>Advanced</h5>
-                            <p>$12/mo</p>
+                            <Container className='pt-2 text-start'>
+                                <img
+                                    alt="icon-advanced"
+                                    src="../images/icon-advanced.svg"
+                                />
+                            </Container>
+                            <Container className='pt-5 ps-2 text-start'>
+                                <h5>Advanced</h5>
+                                <p>$12/mo</p>
+                            </Container>
                         </Button>
                     </Col>
-                    <Col>
+                    <Col className='col-4'>
                         {' '}
                         <Button className='planBtn' outline>
-                            <img
-                                alt="icon-pro"
-                                src="../images/icon-pro.svg"
-                            />
-                            <h5>Pro</h5>
-                            <p>$15/mo</p>
+                            <Container className='pt-2 text-start'>
+                                <img
+                                    alt="icon-pro"
+                                    src="../images/icon-pro.svg"
+                                />
+                            </Container>
+                            <Container className='pt-5 ps-2 text-start'>
+                                <h5>Pro</h5>
+                                <p>$15/mo</p>
+                            </Container>
                         </Button>
                         {' '}
                     </Col>
                 </Row>
             </FormGroup>
             <FormGroup switch className='planFormGrp'>
-                <Row className='planToggle'>
-                    <Col className='col-6 px-0'>
+                <Row className='planToggle justify-content-center'>
+                    <Col className='col-6 pe-5 text-end'>
                         <Label for='id-1'>Monthly</Label>
                     </Col>
                     <Input id='id-1' type="switch" role="switch" />
-                    <Col className='col-6 px-0'>
+                    <Col className='col-6 ps-2 text-start'>
                         <Label for='id-1'>Yearly</Label>
                     </Col>
                 </Row>
             </FormGroup>
-            <Row>
-                <Col className='col-6 px-0 backBtnCol'>
-                    <Button className='backBtn'>
-                        <Link className='backLink' to="/">
-                            Go Back
-                        </Link>
-                    </Button>
-                </Col>
-                <Col className='col-6 px-0 nextBtnCol'>
-                    <Button>
-                        <Link to="/addOns">
-                            Next Step
-                        </Link>
-                    </Button>
-                </Col>
-            </Row>
+            <FormGroup check className='ps-0'>
+                <Row className='pt-5'>
+                    <Col className='col-6 px-3 backBtnCol'>
+                        <Button className='backBtn'>
+                            <Link className='backLink' to="/">
+                                Go Back
+                            </Link>
+                        </Button>
+                    </Col>
+                    <Col className='col-6 px-2 nextBtnCol'>
+                        <Button>
+                            <Link to="/addOns">
+                                Next Step
+                            </Link>
+                        </Button>
+                    </Col>
+                </Row>
+            </FormGroup>
         </Form >
     );
 }

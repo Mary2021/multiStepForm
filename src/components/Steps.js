@@ -1,12 +1,6 @@
+import React from 'react';
 import '../App.css';
-import {
-  CardImg,
-  Badge,
-  CardImgOverlay,
-  CardText,
-  CardTitle,
-  Container,
-} from 'reactstrap';
+import { CardImg, Badge, CardImgOverlay, CardText, CardTitle, Container } from 'reactstrap';
 
 export default function Step() {
   return (

@@ -1,11 +1,12 @@
 import React from 'react';
-import '../App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Steps from './Steps';
 import PersonalInfo from './PersonalInfo';
 import Plan from './Plan';
 import AddOns from './AddOns';
+import FinishingUp from './FinishingUp';
 import Summary from './Summary';
+import '../App.css';
 import { Card, Container, Row, Col } from 'reactstrap';
 
 function debounce(fn, ms) {
@@ -20,7 +21,6 @@ function debounce(fn, ms) {
 }
 
 export default function App() {
-
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth
@@ -65,6 +65,8 @@ export default function App() {
         <Route path="/plan" element={<SelectPlan />}>
         </Route>
         <Route path="/addOns" element={<PickAddOns />}>
+        </Route>
+        <Route path="/finishingUp" element={<FinishUp />}>
         </Route>
         <Route path="/summary" element={<Sum />}>
         </Route>
@@ -136,6 +138,28 @@ function PickAddOns() {
     </div>
   )
 }
+
+function FinishUp() {
+  return (
+    <div className="App">
+      <main>
+        <Container className='p-0'>
+          <Row>
+            <Card inverse className='formContainer'>
+              <Col sm='4'>
+                <Steps />
+              </Col>
+              <Col sm='8'>
+                <FinishingUp />
+              </Col>
+            </Card>
+          </Row>
+        </Container>
+      </main>
+    </div>
+  )
+}
+
 
 function Sum() {
   return (
