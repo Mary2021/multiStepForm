@@ -1,61 +1,96 @@
-import { React } from 'react';
+import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from 'reactstrap';
 
 export default function Plan(props) {
+    const [arcade, setArcade] = useState(false);
+    const [advanced, setAdvanced] = useState(false);
+    const [pro, setPro] = useState(false);
+
+    const handleActive = (event) => {
+        let id = event.target.id
+        if (id === 'arcade') {
+            setArcade(!arcade);
+        }
+        if (id === 'advanced') {
+            setAdvanced(!advanced);
+        }
+        if (id === 'pro') {
+            setPro(!pro);
+        }
+    }
+
     return (
         <Form className='py-5 px-5 mx-5 h-100'>
             <Container className='px-0'>
                 <h2 className='formTitle'>Select your plan</h2>
                 <p className='formText'>You have the option of monthly or yearly billing.</p>
             </Container>
-            <FormGroup check className='px-0 pt-4 pb-4'>
+            <FormGroup className='px-0 pt-4 pb-4'>
                 <Row>
                     <Col className='col-4'>
-                        <Button className='planBtn' outline>
-                            <Container className='pt-2 text-start'>
+                        <Button
+                            id='arcade'
+                            active={arcade}
+                            onClick={handleActive}
+                            className='planBtn'
+                            outline
+                        >
+                            <Container id='arcade' className='pt-2 text-start'>
                                 <img
+                                    id='arcade'
                                     alt="icon-arcade"
                                     src="../images/icon-arcade.svg"
                                 />
                             </Container>
-                            <Container className='pt-5 ps-2 text-start'>
-                                <h5>Arcade</h5>
-                                <p>$9/mo</p>
+                            <Container id='arcade' className='pt-5 ps-2 text-start'>
+                                <h5 id='arcade'>Arcade</h5>
+                                <p id='arcade'>$9/mo</p>
                             </Container>
                         </Button>
-                        {' '}
                     </Col>
                     <Col className='col-4'>
-                        <Button className='planBtn' outline>
-                            <Container className='pt-2 text-start'>
+                        <Button
+                            id='advanced'
+                            active={advanced}
+                            onClick={handleActive}
+                            className='planBtn'
+                            outline
+                        >
+                            <Container id='advanced' className='pt-2 text-start'>
                                 <img
+                                    id='advanced'
                                     alt="icon-advanced"
                                     src="../images/icon-advanced.svg"
                                 />
                             </Container>
-                            <Container className='pt-5 ps-2 text-start'>
-                                <h5>Advanced</h5>
-                                <p>$12/mo</p>
+                            <Container id='advanced' className='pt-5 ps-2 text-start'>
+                                <h5 id='advanced'>Advanced</h5>
+                                <p id='advanced'>$12/mo</p>
                             </Container>
                         </Button>
                     </Col>
                     <Col className='col-4'>
-                        {' '}
-                        <Button className='planBtn' outline>
-                            <Container className='pt-2 text-start'>
+                        <Button
+                            id='pro'
+                            active={pro}
+                            onClick={handleActive}
+                            className='planBtn' 
+                            outline
+                        >
+                            <Container id='pro' className='pt-2 text-start'>
                                 <img
+                                    id='pro'
                                     alt="icon-pro"
                                     src="../images/icon-pro.svg"
                                 />
                             </Container>
-                            <Container className='pt-5 ps-2 text-start'>
-                                <h5>Pro</h5>
-                                <p>$15/mo</p>
+                            <Container id='pro' className='pt-5 ps-2 text-start'>
+                                <h5 id='pro'>Pro</h5>
+                                <p id='pro'>$15/mo</p>
                             </Container>
                         </Button>
-                        {' '}
                     </Col>
                 </Row>
             </FormGroup>
@@ -80,7 +115,7 @@ export default function Plan(props) {
                         </Button>
                     </Col>
                     <Col className='col-6 px-2 nextBtnCol'>
-                        <Button>
+                        <Button className='nextBtn'>
                             <Link to="/addOns">
                                 Next Step
                             </Link>

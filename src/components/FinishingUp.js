@@ -10,7 +10,6 @@ export default function FinishingUp(props) {
                 <h2 className='formTitle'>Finishing up</h2>
                 <p className='formText'>Double-check everything looks OK before confirming.</p>
             </Container>
-            {/* <FormGroup switch className='planFormGrp'> */}
             <Container className='planToggle justify-content-center'>
                 <Row className='planToggle justify-content-center px-3'>
                     <Col className='col-10 pe-5 text-start border-bottom'>
@@ -47,7 +46,6 @@ export default function FinishingUp(props) {
                     </Col>
                 </Row>
             </Container>
-            {/* </FormGroup> */}
             <FormGroup check className='ps-0'>
                 <Row className='pt-5'>
                     <Col className='col-6 px-3 backBtnCol'>
@@ -58,7 +56,7 @@ export default function FinishingUp(props) {
                         </Button>
                     </Col>
                     <Col className='col-6 px-2 nextBtnCol'>
-                        <Button>
+                        <Button className='nextBtn'>
                             <Link to="/summary">
                                 Confirm
                             </Link>

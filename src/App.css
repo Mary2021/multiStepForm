@@ -87,11 +87,11 @@
   font-weight: 600;
 }
 
-.btn {
+/*.btn {
   position:absolute;
   margin-top: 20%;
   background-color: hsl(213, 96%, 18%);
-}
+}*/
 
 .btn a {
   text-decoration: none;
@@ -122,6 +122,18 @@
   border-color: hsl(213, 96%, 18%);
 }
 
+.btn.active {
+  border-color: hsl(243, 100%, 62%)!important;
+  color: hsl(231, 11%, 63%)!important;
+  background-color: hsl(231, 100%, 99%)!important;
+}
+
+.planBtn:hover, .planBtn:active {
+  border-color: hsl(243, 100%, 62%)!important;
+  color: hsl(231, 11%, 63%)!important;
+  background-color: hsl(231, 100%, 99%)!important;
+}
+
 .planFormGrp {
   padding-left: 3%;
   padding-right: 3%;
@@ -141,9 +153,11 @@
   justify-content: left;
 }
 
-.backBtn {
-  border: none;
-  background: none;
+.backBtn, .backBtn:hover, .backBtn:active {
+  border: none !important;
+  background: none !important;
+  position:absolute;
+  margin-top: 20%;
 }
 
 .backLink {
@@ -154,6 +168,12 @@
   display: flex;
   align-items: center;
   justify-content: right;
+}
+
+.nextBtn, .nextBtn:hover {
+  background-color: hsl(213, 96%, 18%);
+  position:absolute;
+  margin-top: 20%;
 }
 
 .addOnBtn {
@@ -169,8 +189,10 @@
   margin-top: 0%;
 }
 
-.addOnBtn:focus{
-  border-color: hsl(243, 100%, 62%);
+.addOnBtn:hover, .addOnBtn:active {
+  background-color: hsl(231, 100%, 99%) !important;
+  color: hsl(231, 11%, 63%) !important;
+  border-color: hsl(243, 100%, 62%) !important;
 }
 
 .sumContainer {
