@@ -8,21 +8,17 @@ export default function Info() {
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: [event.target.value] });
+    
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(formData)
-  }
-
   useEffect(() => {
-    localStorage.setItem("name", JSON.stringify(formData));
+    localStorage.setItem("personsData", JSON.stringify(formData));
   }, [formData]);
 
   console.log(localStorage)
 
   return (
-    <Form className='py-5 px-5 mx-5 h-100' onSubmit={handleSubmit}>
+    <Form className='py-5 px-5 mx-5 h-100'>
       <h2 className='formTitle'>Personal info</h2>
       <p className='formText'>Please provide your name, email address, and phone number.</p>
       <FormGroup>
@@ -64,8 +60,8 @@ export default function Info() {
           onChange={handleChange}
         />
       </FormGroup>
-      <FormGroup className='nextBtnCol pt-5' onSubmit={handleSubmit}>
-        <Button className='nextBtn' type="submit">
+      <FormGroup className='nextBtnCol pt-5'>
+        <Button className='nextBtn'>
           <Link to="/plan">
             Next Step
           </Link>

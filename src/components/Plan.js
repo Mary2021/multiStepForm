@@ -1,25 +1,50 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from 'reactstrap';
 
-export default function Plan(props) {
+export default function Plan() {
     const [arcade, setArcade] = useState(false);
     const [advanced, setAdvanced] = useState(false);
     const [pro, setPro] = useState(false);
+    const [formData, setFormData] = useState({ arcade: 'false', advanced: 'false', pro: 'false' });
 
     const handleActive = (event) => {
         let id = event.target.id
         if (id === 'arcade') {
+            if (arcade !== false) {
+                setFormData({ ...formData, [event.target.id]: 'false' });
+            }
+            if (arcade !== true) {
+                setFormData({ ...formData, [event.target.id]: 'true' });
+            }
             setArcade(!arcade);
         }
+
         if (id === 'advanced') {
+            if (advanced !== false) {
+                setFormData({ ...formData, [event.target.id]: 'false' });
+            }
+            if (advanced !== true) {
+                setFormData({ ...formData, [event.target.id]: 'true' });
+            }
             setAdvanced(!advanced);
         }
+
         if (id === 'pro') {
+            if (pro !== false) {
+                setFormData({ ...formData, [event.target.id]: 'false' });
+            }
+            if (pro !== true) {
+                setFormData({ ...formData, [event.target.id]: 'true' });
+            }
             setPro(!pro);
         }
     }
+
+    useEffect(() => {
+        localStorage.setItem("plan", JSON.stringify(formData));
+    }, [formData]);
 
     return (
         <Form className='py-5 px-5 mx-5 h-100'>
@@ -32,8 +57,10 @@ export default function Plan(props) {
                     <Col className='col-4'>
                         <Button
                             id='arcade'
+                            name='arcade'
                             active={arcade}
                             onClick={handleActive}
+                            onChange={handleActive}
                             className='planBtn'
                             outline
                         >
@@ -55,6 +82,7 @@ export default function Plan(props) {
                             id='advanced'
                             active={advanced}
                             onClick={handleActive}
+                            onChange={handleActive}
                             className='planBtn'
                             outline
                         >
@@ -76,7 +104,8 @@ export default function Plan(props) {
                             id='pro'
                             active={pro}
                             onClick={handleActive}
-                            className='planBtn' 
+                            onChange={handleActive}
+                            className='planBtn'
                             outline
                         >
                             <Container id='pro' className='pt-2 text-start'>
