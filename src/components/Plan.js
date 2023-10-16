@@ -57,7 +57,6 @@ export default function Plan() {
                     <Col className='col-4'>
                         <Button
                             id='arcade'
-                            name='arcade'
                             active={arcade}
                             onClick={handleActive}
                             onChange={handleActive}
