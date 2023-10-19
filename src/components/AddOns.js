@@ -33,7 +33,7 @@ export default function AddOns() {
 
         if (id === 'box1') {
             if (box1 === false) {
-                setFormData({ ...formData, 'Online service': '+$1/mo' });
+                setFormData({ ...formData, 'Online service': 1 });
                 setBox1(!box1);
             }
             if (box1 === true) {
@@ -43,7 +43,7 @@ export default function AddOns() {
         }
         if (id === 'box2') {
             if (box2 === false) {
-                setFormData({ ...formData, 'Larger storage': '+$2/mo' });
+                setFormData({ ...formData, 'Larger storage': 2 });
                 setBox2(!box2);
             }
             if (box2 === true) {
@@ -53,7 +53,7 @@ export default function AddOns() {
         }
         if (id === 'box3') {
             if (box3 === false) {
-                setFormData({ ...formData, 'Customizable profile': '+$2/mo' });
+                setFormData({ ...formData, 'Customizable profile': 2 });
                 setBox3(!box3);
             }
             if (box3 === true) {

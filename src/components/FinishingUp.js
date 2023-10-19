@@ -10,19 +10,23 @@ export default function FinishingUp() {
     let planName = Object.keys(parsedObj)[0].charAt(0).toUpperCase() + Object.keys(parsedObj)[0].slice(1);
     let planPrice = Object.values(parsedObj)[0]
 
-    const generateAddOnsRow = () => {
-        //get selected addOns from localStorage and generate rows with that data
-        let addOnsObj = window.localStorage.getItem('addOns')
-        let parsedObj2 = JSON.parse(addOnsObj)
+    //get selected addOns from localStorage and generate rows with that data
+    let addOnsObj = window.localStorage.getItem('addOns')
+    let parsedObj2 = JSON.parse(addOnsObj)
 
+    //sum object.values to get total price
+    const sumValues = Object.values(parsedObj2).reduce((a, b) => a + b, 0);
+    let totalPrice = planPrice + sumValues
+
+    const generateAddOnsRow = () => {
         return (
             Object.entries(parsedObj2).map(([key, value]) => (
-                <Row key={key+'1'} className='planToggle justify-content-center px-3 pt-0'>
+                <Row key={key + '1'} className='planToggle justify-content-center px-3 pt-0'>
                     <Col className='col-9 pe-5 text-start'>
                         <p className='formText'>{key}</p>
                     </Col>
                     <Col className='col-3 ps-2 text-end'>
-                        <p className='formText'>{value}</p>
+                        <p className='formText'>+${value}/mo</p>
                     </Col>
                 </Row>))
         )
@@ -40,7 +44,7 @@ export default function FinishingUp() {
                         <p className='formText'>{planName} (Monthly) <br></br><Link className='backLink' to="/plan">Change</Link></p>
                     </Col>
                     <Col className='col-3 ps-2 text-end border-bottom'>
-                        <p className='formText'>{planPrice}</p>
+                        <p className='formText'>${planPrice}/mo</p>
                     </Col>
                 </Row>
                 {generateAddOnsRow()}
@@ -51,7 +55,7 @@ export default function FinishingUp() {
                         <p className='formText'>Total (per month)</p>
                     </Col>
                     <Col className='col-3 ps-2 text-end'>
-                        <p className='formText'>$12/mo</p>
+                        <p className='formText'>${totalPrice}/mo</p>
                     </Col>
                 </Row>
             </Container>

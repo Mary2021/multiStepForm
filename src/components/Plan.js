@@ -7,20 +7,20 @@ export default function Plan() {
     const [arcade, setArcade] = useState(true);
     const [advanced, setAdvanced] = useState(false);
     const [pro, setPro] = useState(false);
-    const [formData, setFormData] = useState({ 'arcade': '$9/mo' });
+    const [formData, setFormData] = useState({ 'arcade': 9 });
 
     const handleActive = (event) => {
         event.preventDefault();
         let id = event.target.id
         let value = ''
         if (id === 'arcade') {
-            value = '$9/mo'
+            value = 9
         }
         if (id === 'advanced') {
-            value = '$12/mo'
+            value = 12
         }
         if (id === 'pro') {
-            value = '$15/mo'
+            value = 15
         }
 
         if (id === 'arcade') {
