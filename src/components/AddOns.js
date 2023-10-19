@@ -7,36 +7,59 @@ export default function AddOns() {
     const [box1, setBox1] = useState(false);
     const [box2, setBox2] = useState(false);
     const [box3, setBox3] = useState(false);
-    const [formData, setFormData] = useState({ box1: 'false', box2: 'false', box3: 'false' });
+    const [formData, setFormData] = useState({});
 
     const handleActive = (event) => {
         let id = event.target.id
+
+        let keyValue = ''
         if (id === 'box1') {
-            if (box1!== false) {
-                setFormData({ ...formData, [event.target.id]: 'false' });
-            }
-            if (box1 !== true) {
-                setFormData({ ...formData, [event.target.id]: 'true' });
-            }
-            setBox1(!box1);
+            keyValue = 'Online service'
         }
         if (id === 'box2') {
-            if (box2!== false) {
-                setFormData({ ...formData, [event.target.id]: 'false' });
-            }
-            if (box2 !== true) {
-                setFormData({ ...formData, [event.target.id]: 'true' });
-            }
-            setBox2(!box2);
+            keyValue = 'Larger storage'
         }
         if (id === 'box3') {
-            if (box3!== false) {
-                setFormData({ ...formData, [event.target.id]: 'false' });
+            keyValue = 'Customizable profile'
+        }
+
+        const selectedAddons = Object.keys(formData)
+            .filter((key) => !key.includes(keyValue))
+            .reduce((object, key) => {
+                return Object.assign(object, {
+                    [key]: formData[key]
+                });
+            }, {});
+
+        if (id === 'box1') {
+            if (box1 === false) {
+                setFormData({ ...formData, 'Online service': '+$1/mo' });
+                setBox1(!box1);
             }
-            if (box3 !== true) {
-                setFormData({ ...formData, [event.target.id]: 'true' });
+            if (box1 === true) {
+                setFormData(selectedAddons)
+                setBox1(!box1);
             }
-            setBox3(!box3);
+        }
+        if (id === 'box2') {
+            if (box2 === false) {
+                setFormData({ ...formData, 'Larger storage': '+$2/mo' });
+                setBox2(!box2);
+            }
+            if (box2 === true) {
+                setFormData(selectedAddons)
+                setBox2(!box2);
+            }
+        }
+        if (id === 'box3') {
+            if (box3 === false) {
+                setFormData({ ...formData, 'Customizable profile': '+$2/mo' });
+                setBox3(!box3);
+            }
+            if (box3 === true) {
+                setFormData(selectedAddons)
+                setBox3(!box3);
+            }
         }
     }
 
@@ -99,11 +122,11 @@ export default function AddOns() {
                         </Col>
                     </Row>
                 </Button>
-                <Button 
-                    id='box3' 
-                    className='addOnBtn' 
+                <Button
+                    id='box3'
+                    className='addOnBtn'
                     active={box3}
-                    onClick={handleActive} 
+                    onClick={handleActive}
                     outline
                 >
                     <Row>

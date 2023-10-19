@@ -4,46 +4,66 @@ import '../App.css';
 import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from 'reactstrap';
 
 export default function Plan() {
-    const [arcade, setArcade] = useState(false);
+    const [arcade, setArcade] = useState(true);
     const [advanced, setAdvanced] = useState(false);
     const [pro, setPro] = useState(false);
-    const [formData, setFormData] = useState({ arcade: 'false', advanced: 'false', pro: 'false' });
+    const [formData, setFormData] = useState({ 'arcade': '$9/mo' });
 
     const handleActive = (event) => {
+        event.preventDefault();
         let id = event.target.id
+        let value = ''
         if (id === 'arcade') {
-            if (arcade !== false) {
-                setFormData({ ...formData, [event.target.id]: 'false' });
+            value = '$9/mo'
+        }
+        if (id === 'advanced') {
+            value = '$12/mo'
+        }
+        if (id === 'pro') {
+            value = '$15/mo'
+        }
+
+        if (id === 'arcade') {
+            if (arcade === true) {
+                setArcade(!arcade);
             }
-            if (arcade !== true) {
-                setFormData({ ...formData, [event.target.id]: 'true' });
+            if (arcade === false) {
+                setFormData({ [event.target.id]: value });
+                setAdvanced(false);
+                setPro(false);
+                setArcade(!arcade);
             }
-            setArcade(!arcade);
         }
 
         if (id === 'advanced') {
-            if (advanced !== false) {
-                setFormData({ ...formData, [event.target.id]: 'false' });
+            if (advanced === true) {
+                setAdvanced(!advanced);
             }
-            if (advanced !== true) {
-                setFormData({ ...formData, [event.target.id]: 'true' });
+            if (advanced === false) {
+                setFormData({ [event.target.id]: value });
+                setArcade(false);
+                setPro(false);
+                setAdvanced(!advanced);
             }
-            setAdvanced(!advanced);
         }
 
         if (id === 'pro') {
-            if (pro !== false) {
-                setFormData({ ...formData, [event.target.id]: 'false' });
+            if (pro === true) {
+                setPro(!pro);
             }
-            if (pro !== true) {
-                setFormData({ ...formData, [event.target.id]: 'true' });
+            if (pro === false) {
+                setFormData({ [event.target.id]: value });
+                setArcade(false);
+                setAdvanced(false);
+                setPro(!pro);
             }
-            setPro(!pro);
         }
     }
 
+    //console.log(formData)
+
     useEffect(() => {
-        localStorage.setItem("plan", JSON.stringify(formData));
+        window.localStorage.setItem("plan", JSON.stringify(formData));
     }, [formData]);
 
     return (
@@ -59,7 +79,6 @@ export default function Plan() {
                             id='arcade'
                             active={arcade}
                             onClick={handleActive}
-                            onChange={handleActive}
                             className='planBtn'
                             outline
                         >
@@ -81,7 +100,6 @@ export default function Plan() {
                             id='advanced'
                             active={advanced}
                             onClick={handleActive}
-                            onChange={handleActive}
                             className='planBtn'
                             outline
                         >
@@ -103,7 +121,6 @@ export default function Plan() {
                             id='pro'
                             active={pro}
                             onClick={handleActive}
-                            onChange={handleActive}
                             className='planBtn'
                             outline
                         >

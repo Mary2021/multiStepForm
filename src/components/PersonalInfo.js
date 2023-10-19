@@ -15,7 +15,7 @@ export default function Info() {
     localStorage.setItem("personsData", JSON.stringify(formData));
   }, [formData]);
 
-  console.log(localStorage)
+  //console.log(localStorage)
 
   return (
     <Form className='py-5 px-5 mx-5 h-100'>
