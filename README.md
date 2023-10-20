@@ -1,14 +1,68 @@
-https://reactrouter.com/en/v6.3.0/getting-started/overview
-https://stackoverflow.com/questions/54103302/react-toggle-active-class-between-multiple-reactstrap-buttons 
+# Frontend Mentor - Multi-step form solution
 
-https://www.freecodecamp.org/news/how-to-create-forms-in-react-using-react-hook-form/ 
-https://stackoverflow.com/questions/66588407/react-hooks-form-conflict-with-reactstrap
-https://6-4-0--reactstrap.netlify.app/components/form/
-https://react-hook-form.com/get-started#IntegratingControlledInputs 
+This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
+## Table of contents
+
+- [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+- [My process](#my-process)
+    - [Built with](#built-with)
+    - [Useful links](#useful-links)
+- [Author](#author)
+- [Getting Started with Create React App](#getting-started-with-create-react-app)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- Complete each step of the sequence
+- Go back to a previous step to update their selections
+- See a summary of their selections on the final step and confirm their order
+- View the optimal layout for the interface depending on their device's screen size (at the moment only screen width 1440px available)
+- See hover and focus states for all interactive elements on the page (some hover and focus states yet to come)
+
+Yet to come:
+- Receive form validation messages if:
+  - A field has been missed
+  - The email address is not formatted correctly
+  - A step is submitted, but no selection has been made
 
 ### Screenshot
 
 ![](./public/images/desktop-design-step-1.jpg)
+
+### Links
+
+- [Github repo](https://github.com:Mary2021/multiStepForm.git)
+- [Live URL](https://mary2021.github.io/multiStepForm/)
+
+## My process
+
+### Built with
+
+- [Create React App](https://create-react-app.dev/docs/getting-started). [Read more](#getting-started-with-create-react-app)
+- [React Bootstrap](https://reactstrap.github.io/?path=/story/home-installation--page)
+- CSS custom properties
+
+### Useful links
+
+- [React folder structure](https://blog.webdevsimplified.com/2022-07/react-folder-structure/)
+- [React Router](https://reactrouter.com/en/v6.3.0/getting-started/overview/)
+- [Reactstrap button toggle active class](https://stackoverflow.com/questions/54103302/react-toggle-active-class-between-multiple-reactstrap-buttons)
+- [Re render React component on window resize](https://www.pluralsight.com/guides/re-render-react-component-on-window-resize)
+- [Using localstorage with React hooks](https://blog.logrocket.com/using-localstorage-react-hooks/), [See also](https://stackoverflow.com/questions/19635077/adding-objects-to-array-in-localstorage), [and this too](https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem)
+
+
+
+## Author
+
+- Website - [Mary P](https://github.com/Mary2021)
+
 
 # Getting Started with Create React App
 
