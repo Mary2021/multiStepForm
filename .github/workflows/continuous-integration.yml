@@ -5,10 +5,11 @@ jobs:
     name: Build and Test
     runs-on: ubuntu-latest    
     steps:
-      - uses: actions/checkout@v1
-      - name: Install Dependencies
-        run: npm install
-      - name: Build
+      - name: Checkout branch
+        uses: actions/checkout@v3
+      - name: Clean install dependencies
+        run: npm ci
+      - name: Run build script
         run: npm run build
-      - name: Test
+      - name: Run test script
         run: npm run test --watchAll=false
