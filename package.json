@@ -2,7 +2,7 @@
   "name": "multi-step-form",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/multiStepForm/",
+  "homepage": "https://mary2021.github.io/multistepform/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/traverse": "^7.23.2",
