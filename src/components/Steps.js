@@ -7,7 +7,7 @@ export default function Step() {
     <Container className='m-0 p-0'>
       <CardImg
         alt="Card image cap"
-        src="../images/bg-sidebar-desktop.svg"
+        src="../multiStepForm/images/bg-sidebar-desktop.svg"
       />
       <CardImgOverlay>
         <Badge>

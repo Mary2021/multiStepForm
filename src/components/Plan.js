@@ -86,7 +86,7 @@ export default function Plan() {
                                 <img
                                     id='arcade'
                                     alt="icon-arcade"
-                                    src="../images/icon-arcade.svg"
+                                    src="../multiStepForm/images/icon-arcade.svg"
                                 />
                             </Container>
                             <Container id='arcade' className='pt-5 ps-2 text-start'>
@@ -107,7 +107,7 @@ export default function Plan() {
                                 <img
                                     id='advanced'
                                     alt="icon-advanced"
-                                    src="../images/icon-advanced.svg"
+                                    src="../multiStepForm/images/icon-advanced.svg"
                                 />
                             </Container>
                             <Container id='advanced' className='pt-5 ps-2 text-start'>
@@ -128,7 +128,7 @@ export default function Plan() {
                                 <img
                                     id='pro'
                                     alt="icon-pro"
-                                    src="../images/icon-pro.svg"
+                                    src="../multiStepForm/images/icon-pro.svg"
                                 />
                             </Container>
                             <Container id='pro' className='pt-5 ps-2 text-start'>
