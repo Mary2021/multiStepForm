@@ -2,6 +2,7 @@
   "name": "multi-step-form",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mary2021.github.io/multiStepForm",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/traverse": "^7.23.2",
@@ -18,11 +19,15 @@
     "reactstrap": "^9.2.0",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "execa": "latest"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
   },
   "eslintConfig": {
     "extends": [
