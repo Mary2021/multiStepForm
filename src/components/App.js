@@ -58,7 +58,7 @@ export default function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/multiStepForm">
       <Routes>
         <Route path="/" element={<Info />}>
         </Route>
