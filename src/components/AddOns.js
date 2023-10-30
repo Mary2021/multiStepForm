@@ -68,9 +68,9 @@ export default function AddOns() {
     }, [formData]);
 
     return (
-        <Form className='py-5 px-5 mx-5 h-100'>
+        <Form className='pt-xl-5 pb-xl-0 px-xl-5 mx-xl-5 pt-lg-3 pb-lg-0 px-lg-4 mx-lg-3 pt-md-3 pb-md-0 px-md-3 mx-md-0 h-100'>
             <h2 className='formTitle'>Pick add-ons</h2>
-            <p className='formText'>Add-ons help to enhance your gaming experience.</p>
+            <p className='formText mb-lg-3 mb-md-1'>Add-ons help to enhance your gaming experience.</p>
             <Col className='d-grid gap-2'>
                 <Button
                     id='box1'
@@ -89,9 +89,9 @@ export default function AddOns() {
                                 {' '}
                             </FormGroup>
                         </Col>
-                        <Col className='col-8'>
-                            <h5>Online service</h5>
-                            <p>Access to multiplayer games</p>
+                        <Col className='col-8 pe-md-0'>
+                            <h5 className='responsiveFont'>Online service</h5>
+                            <p className='mb-xl-4 mb-lg-3 mb-md-1'>Access to multiplayer games</p>
                         </Col>
                         <Col className='col-3'>
                             <p>+$1/mo</p>
@@ -113,9 +113,9 @@ export default function AddOns() {
                                 {' '}
                             </FormGroup>
                         </Col>
-                        <Col className='col-8'>
-                            <h5>Larger storage</h5>
-                            <p>Extra 1TB of cloud save</p>
+                        <Col className='col-8 pe-md-0'>
+                            <h5 className='responsiveFont'>Larger storage</h5>
+                            <p className='mb-xl-4 mb-lg-3 mb-md-1'>Extra 1TB of cloud save</p>
                         </Col>
                         <Col className='col-3'>
                             <p>+$2/mo</p>
@@ -137,9 +137,9 @@ export default function AddOns() {
                                 {' '}
                             </FormGroup>
                         </Col>
-                        <Col className='col-8'>
-                            <h5>Customizable profile</h5>
-                            <p>Custom theme on your profile</p>
+                        <Col className='col-8 pe-md-0'>
+                            <h5 className='responsiveFont'>Customizable profile</h5>
+                            <p className='mb-xl-4 mb-lg-3 mb-md-1'>Custom theme on your profile</p>
                         </Col>
                         <Col className='col-3'>
                             <p>+$2/mo</p>
@@ -147,15 +147,15 @@ export default function AddOns() {
                     </Row>
                 </Button>
             </Col>
-            <Row className='pt-5'>
-                <Col className='col-6 px-3 backBtnCol'>
+            <Row className='pt-0'>
+                <Col className='col-3 ps-0 backBtnCol'>
                     <Button className='backBtn'>
                         <Link className='backLink' to="/plan">
                             Go Back
                         </Link>
                     </Button>
                 </Col>
-                <Col className='col-6 px-2 nextBtnCol'>
+                <Col className='col-3 pe-0 nextBtnCol'>
                     <Button className='nextBtn'>
                         <Link to="/finishingUp">
                             Next Step

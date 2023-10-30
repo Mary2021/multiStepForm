@@ -67,14 +67,14 @@ export default function Plan() {
     }, [formData]);
 
     return (
-        <Form className='py-5 px-5 mx-5 h-100'>
+        <Form className='pt-xl-5 pb-xl-0 px-xl-5 mx-xl-5 pt-lg-5 pb-lg-0 px-lg-4 mx-lg-3 pt-md-3 pb-md-0 px-md-3 mx-md-0 h-100'>
             <Container className='px-0'>
                 <h2 className='formTitle'>Select your plan</h2>
                 <p className='formText'>You have the option of monthly or yearly billing.</p>
             </Container>
-            <FormGroup className='px-0 pt-4 pb-4'>
+            <FormGroup className='px-0 pt-xl-4 pt-lg-3 pb-4 mb-xl-3 mb-lg-2 mb-md-0'>
                 <Row>
-                    <Col className='col-4'>
+                    <Col className='col-4 ps-xl-3 pe-xl-1 ps-lg-2 pe-lg-1 ps-md-2 pe-md-1'>
                         <Button
                             id='arcade'
                             active={arcade}
@@ -89,13 +89,13 @@ export default function Plan() {
                                     src="../multiStepForm/images/icon-arcade.svg"
                                 />
                             </Container>
-                            <Container id='arcade' className='pt-5 ps-2 text-start'>
-                                <h5 id='arcade'>Arcade</h5>
+                            <Container id='arcade' className='pt-xl-5 pt-lg-5 pt-md-4 ps-2 text-start'>
+                                <h5 id='arcade' className='responsiveFont'>Arcade</h5>
                                 <p id='arcade'>$9/mo</p>
                             </Container>
                         </Button>
                     </Col>
-                    <Col className='col-4'>
+                    <Col className='col-4 ps-xl-2 pe-xl-2 ps-lg-1 pe-lg-1 ps-md-1 pe-md-1'>
                         <Button
                             id='advanced'
                             active={advanced}
@@ -110,13 +110,13 @@ export default function Plan() {
                                     src="../multiStepForm/images/icon-advanced.svg"
                                 />
                             </Container>
-                            <Container id='advanced' className='pt-5 ps-2 text-start'>
-                                <h5 id='advanced'>Advanced</h5>
+                            <Container id='advanced' className='pt-xl-5 pt-lg-5 pt-md-4 ps-2 text-start'>
+                                <h5 id='advanced' className='responsiveFont'>Advanced</h5>
                                 <p id='advanced'>$12/mo</p>
                             </Container>
                         </Button>
                     </Col>
-                    <Col className='col-4'>
+                    <Col className='col-4 ps-xl-1 pe-xl-3 ps-lg-1 pe-lg-2 ps-md-1 pe-md-2'>
                         <Button
                             id='pro'
                             active={pro}
@@ -131,8 +131,8 @@ export default function Plan() {
                                     src="../multiStepForm/images/icon-pro.svg"
                                 />
                             </Container>
-                            <Container id='pro' className='pt-5 ps-2 text-start'>
-                                <h5 id='pro'>Pro</h5>
+                            <Container id='pro' className='pt-xl-5 pt-lg-5 pt-md-4 ps-2 text-start'>
+                                <h5 id='pro' className='responsiveFont'>Pro</h5>
                                 <p id='pro'>$15/mo</p>
                             </Container>
                         </Button>
@@ -151,15 +151,15 @@ export default function Plan() {
                 </Row>
             </FormGroup>
             <FormGroup check className='ps-0'>
-                <Row className='pt-5'>
-                    <Col className='col-6 px-3 backBtnCol'>
+                <Row>
+                    <Col className='col-3 ps-0 backBtnCol'>
                         <Button className='backBtn'>
                             <Link className='backLink' to="/">
                                 Go Back
                             </Link>
                         </Button>
                     </Col>
-                    <Col className='col-6 px-2 nextBtnCol'>
+                    <Col className='col-3 pe-0 nextBtnCol'>
                         <Button className='nextBtn'>
                             <Link to="/addOns">
                                 Next Step
