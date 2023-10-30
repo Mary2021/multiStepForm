@@ -21,29 +21,29 @@ export default function FinishingUp() {
     const generateAddOnsRow = () => {
         return (
             Object.entries(parsedObj2).map(([key, value]) => (
-                <Row key={key + '1'} className='planToggle justify-content-center px-3 pt-0'>
+                <Row key={key + '1'} className='justify-content-center px-3 pt-1'>
                     <Col className='col-9 pe-5 text-start'>
-                        <p className='formText'>{key}</p>
+                        <p className='formText mb-2'>{key}</p>
                     </Col>
-                    <Col className='col-3 ps-2 text-end'>
-                        <p className='formText'>+${value}/mo</p>
+                    <Col className='col-3 ps-md-0 text-end'>
+                        <p className='formText mb-2'>+${value}/mo</p>
                     </Col>
                 </Row>))
         )
     }
 
     return (
-        <Form className='py-5 px-5 mx-5 h-100'>
+        <Form className='pt-xl-5 pb-xl-0 px-xl-5 mx-xl-5 pt-lg-5 pb-lg-0 px-lg-4 mx-lg-3 pt-md-3 pb-md-0 px-md-3 mx-md-0 h-100'>
             <Container className='px-0'>
                 <h2 className='formTitle'>Finishing up</h2>
                 <p className='formText'>Double-check everything looks OK before confirming.</p>
             </Container>
             <Container className='planToggle justify-content-center'>
-                <Row className='planToggle justify-content-center px-3'>
+                <Row className='justify-content-center px-3'>
                     <Col className='col-9 pe-5 text-start border-bottom'>
                         <p className='formText'>{planName} (Monthly) <br></br><Link className='backLink' to="/plan">Change</Link></p>
                     </Col>
-                    <Col className='col-3 ps-2 text-end border-bottom'>
+                    <Col className='col-3 ps-md-0 text-end border-bottom'>
                         <p className='formText'>${planPrice}/mo</p>
                     </Col>
                 </Row>
@@ -61,14 +61,14 @@ export default function FinishingUp() {
             </Container>
             <FormGroup check className='ps-0'>
                 <Row className='pt-5'>
-                    <Col className='col-6 px-3 backBtnCol'>
+                    <Col className='col-3 ps-0 backBtnCol'>
                         <Button className='backBtn'>
                             <Link className='backLink' to="/addOns">
                                 Go Back
                             </Link>
                         </Button>
                     </Col>
-                    <Col className='col-6 px-2 nextBtnCol'>
+                    <Col className='col-3 pe-0 nextBtnCol'>
                         <Button className='nextBtn'>
                             <Link to="/summary">
                                 Confirm

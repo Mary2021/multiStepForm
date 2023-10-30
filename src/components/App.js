@@ -44,6 +44,8 @@ export default function App() {
   console.log(window.innerWidth)
   console.log(dimensions.width)
   console.log(dimensions.height)
+  //alert(dimensions.width)
+  //alert(dimensions.height)
 
 
   function isMobile() {

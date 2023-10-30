@@ -4,7 +4,7 @@ import { Container } from 'reactstrap';
 
 export default function Summary() { 
     return (
-        <Container className='py-5 px-5 sumContainer'>
+        <Container className='pt-3 pb-0 px-5 sumContainer'>
             <img
                 alt="icon-arcade"
                 src="../multiStepForm/images/icon-thank-you.svg"

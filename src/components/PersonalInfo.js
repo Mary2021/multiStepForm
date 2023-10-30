@@ -18,10 +18,10 @@ export default function Info() {
   //console.log(localStorage)
 
   return (
-    <Form className='py-5 px-5 mx-5 h-100'>
+    <Form className='pt-xl-5 pb-xl-0 px-xl-5 mx-xl-5 pt-lg-3 pb-lg-0 px-lg-4 mx-lg-3 pt-md-3 pb-md-0 px-md-3 mx-md-0 h-100'>
       <h2 className='formTitle'>Personal info</h2>
       <p className='formText'>Please provide your name, email address, and phone number.</p>
-      <FormGroup>
+      <FormGroup className='mb-xl-3 mb-lg-2 mb-md-1'>
         <Label for="exampleName">
           Name
         </Label>
@@ -34,7 +34,7 @@ export default function Info() {
           onChange={handleChange}
         />
       </FormGroup>
-      <FormGroup>
+      <FormGroup className='mb-xl-3 mb-lg-2 mb-md-1'>
         <Label for="exampleEmail">
           Email Address
         </Label>
@@ -47,7 +47,7 @@ export default function Info() {
           onChange={handleChange}
         />
       </FormGroup>
-      <FormGroup>
+      <FormGroup className='mb-xl-3 mb-lg-2 mb-md-1'>
         <Label for="examplePhone">
           Phone Number
         </Label>
@@ -60,7 +60,7 @@ export default function Info() {
           onChange={handleChange}
         />
       </FormGroup>
-      <FormGroup className='nextBtnCol pt-5'>
+      <FormGroup className='nextBtnCol'>
         <Button className='nextBtn'>
           <Link to="/plan">
             Next Step

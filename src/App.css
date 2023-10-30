@@ -15,7 +15,7 @@
   padding: 2%;
 }
 
-.sideBar{
+.sideBar {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -32,13 +32,14 @@
   text-align: start;
   top: 10%;
   left: 10%;
-  width: 40%;
+  width: 30%;
+  height: 80%;
 }
 
 .badge {
   position: absolute;
   left: -2%;
-  background-color:transparent!important;
+  background-color: transparent !important;
   border: solid;
   border-width: 0.15em;
   border-radius: 90%;
@@ -49,17 +50,17 @@
   padding-right: 1%;
 }
 
-.card-title{
+.card-title {
   color: hsl(231, 100%, 99%);
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 0%;
 }
 
-.card-text{
+.card-text {
   color: hsl(0, 0%, 100%);
   font-weight: 500;
-  letter-spacing:0.1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -78,11 +79,13 @@
   color: hsl(213, 96%, 18%);
   font-weight: 600;
 }
+
 .formText {
   color: hsl(231, 11%, 63%);
   font-weight: 500;
 }
-.form-label{
+
+.form-label {
   color: hsl(213, 96%, 18%);
   font-weight: 600;
 }
@@ -122,16 +125,147 @@
   border-color: hsl(213, 96%, 18%);
 }
 
-.btn.active {
-  border-color: hsl(243, 100%, 62%)!important;
-  color: hsl(231, 11%, 63%)!important;
-  background-color: hsl(231, 100%, 99%)!important;
+@media screen and (max-width: 1500px) and (min-width: 1301px) {
+  .responsiveFont, .card-title, .card-text {
+    font-size: 130%;
+  }
+
+  .nextBtnCol {
+    display: flex;
+    position: absolute;
+    right: 8rem;
+    bottom: 2rem;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 0px !important;
+  }
+
+  .backBtnCol {
+    display: flex;
+    position: absolute;
+    left: 30rem;
+    bottom: 2rem;
+    align-items: center;
+    justify-content: left;
+  } 
 }
 
-.planBtn:hover, .planBtn:active {
-  border-color: hsl(243, 100%, 62%)!important;
-  color: hsl(231, 11%, 63%)!important;
-  background-color: hsl(231, 100%, 99%)!important;
+@media screen and (max-width: 1300px) and (min-width: 1200px) {
+  .responsiveFont {
+    font-size: 130%;
+  }
+
+  .nextBtnCol {
+    display: flex;
+    position: absolute;
+    right: 8rem;
+    bottom: 2rem;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 0px !important;
+  }
+
+  .backBtnCol {
+    display: flex;
+    position: absolute;
+    left: 27rem;
+    bottom: 2rem;
+    align-items: center;
+    justify-content: left;
+  } 
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .responsiveFont {
+    font-size: 120%;
+  }
+
+  .nextBtnCol {
+    display: flex;
+    position: absolute;
+    right: 3rem;
+    bottom: 1rem;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 0px !important;
+  }
+
+  .backBtnCol {
+    display: flex;
+    position: absolute;
+    left: 19rem;
+    bottom: 1rem;
+    align-items: center;
+    justify-content: left;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 767px) {
+  .responsiveFont {
+    font-size: 100%;
+  }
+
+  .card-title, .card-text {
+    font-size: 80%;
+  }
+
+  .nextBtnCol {
+    display: flex;
+    position: absolute;
+    right: 1.4rem;
+    bottom: 0.6rem;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 0px !important;
+  }
+
+  .backBtnCol {
+    display: flex;
+    position: absolute;
+    left: 13rem;
+    bottom: 0.6rem;
+    align-items: center;
+    justify-content: left;
+  }
+
+}
+
+@media screen and (max-width: 766px) and (min-width: 425px) {
+  .responsiveFont {
+    font-size: 90%;
+  }
+
+  .nextBtnCol {
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    bottom: 10px;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 0px !important;
+  }
+
+  .backBtnCol {
+    display: flex;
+    position: absolute;
+    left: 13rem;
+    bottom: 0.6rem;
+    align-items: center;
+    justify-content: left;
+  }
+}
+
+.btn.active {
+  border-color: hsl(243, 100%, 62%) !important;
+  color: hsl(231, 11%, 63%) !important;
+  background-color: hsl(231, 100%, 99%) !important;
+}
+
+.planBtn:hover,
+.planBtn:active {
+  border-color: hsl(243, 100%, 62%) !important;
+  color: hsl(231, 11%, 63%) !important;
+  background-color: hsl(231, 100%, 99%) !important;
 }
 
 .planFormGrp {
@@ -147,33 +281,26 @@
   padding-bottom: 2%;
 }
 
-.backBtnCol {
+/* .backBtnCol {
   display: flex;
   align-items: center;
   justify-content: left;
-}
+} */
 
-.backBtn, .backBtn:hover, .backBtn:active {
+.backBtn,
+.backBtn:hover,
+.backBtn:active {
   border: none !important;
   background: none !important;
-  position:absolute;
-  margin-top: 20%;
 }
 
 .backLink {
   color: hsl(231, 11%, 63%) !important;
 }
 
-.nextBtnCol {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-}
-
-.nextBtn, .nextBtn:hover {
+.nextBtn,
+.nextBtn:hover {
   background-color: hsl(213, 96%, 18%);
-  position:absolute;
-  margin-top: 20%;
 }
 
 .addOnBtn {
@@ -189,7 +316,8 @@
   margin-top: 0%;
 }
 
-.addOnBtn:hover, .addOnBtn:active {
+.addOnBtn:hover,
+.addOnBtn:active {
   background-color: hsl(231, 100%, 99%) !important;
   color: hsl(231, 11%, 63%) !important;
   border-color: hsl(243, 100%, 62%) !important;
