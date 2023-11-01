@@ -47,7 +47,7 @@ export default function Info() {
           onChange={handleChange}
         />
       </FormGroup>
-      <FormGroup className='mb-xl-3 mb-lg-2 mb-md-1'>
+      <FormGroup className='mb-xl-3 mb-lg-2 mb-md-1 mb-5'>
         <Label for="examplePhone">
           Phone Number
         </Label>
@@ -60,7 +60,7 @@ export default function Info() {
           onChange={handleChange}
         />
       </FormGroup>
-      <FormGroup className='nextBtnCol'>
+      <FormGroup className='nextBtnCol pt-5 rmMb'>
         <Button className='nextBtn'>
           <Link to="/plan">
             Next Step

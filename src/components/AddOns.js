@@ -71,6 +71,7 @@ export default function AddOns() {
         <Form className='pt-xl-5 pb-xl-0 px-xl-5 mx-xl-5 pt-lg-3 pb-lg-0 px-lg-4 mx-lg-3 pt-md-3 pb-md-0 px-md-3 mx-md-0 h-100'>
             <h2 className='formTitle'>Pick add-ons</h2>
             <p className='formText mb-lg-3 mb-md-1'>Add-ons help to enhance your gaming experience.</p>
+            <FormGroup className='mb-5'>
             <Col className='d-grid gap-2'>
                 <Button
                     id='box1'
@@ -79,8 +80,8 @@ export default function AddOns() {
                     className='addOnBtn'
                     outline
                 >
-                    <Row>
-                        <Col className='col-1 justify-content-start'>
+                    <Row className='d-flex align-items-center'>
+                        <Col className='col-1 col-sm-1'>
                             <FormGroup check>
                                 <Input
                                     id="box1"
@@ -89,11 +90,11 @@ export default function AddOns() {
                                 {' '}
                             </FormGroup>
                         </Col>
-                        <Col className='col-8 pe-md-0'>
-                            <h5 className='responsiveFont'>Online service</h5>
-                            <p className='mb-xl-4 mb-lg-3 mb-md-1'>Access to multiplayer games</p>
+                        <Col className='col-sm-8 pe-md-0 ps-md-2 ps-3 pe-0'>
+                            <h5 className='responsiveFont text-start'>Online service</h5>
+                            <p className='mb-xl-4 mb-lg-3 mb-md-1 mb-0 text-start'>Access to multiplayer games</p>
                         </Col>
-                        <Col className='col-3'>
+                        <Col className='col-3 col-sm-3 px-0'>
                             <p>+$1/mo</p>
                         </Col>
                     </Row>
@@ -105,19 +106,19 @@ export default function AddOns() {
                     onClick={handleActive}
                     outline
                 >
-                    <Row>
-                        <Col className='col-1 justify-content-start'>
+                    <Row className='d-flex align-items-center'>
+                        <Col className='col-1 col-sm-1 '>
                             <FormGroup check>
                                 <Input id="box2" type="checkbox"
                                 />
                                 {' '}
                             </FormGroup>
                         </Col>
-                        <Col className='col-8 pe-md-0'>
-                            <h5 className='responsiveFont'>Larger storage</h5>
-                            <p className='mb-xl-4 mb-lg-3 mb-md-1'>Extra 1TB of cloud save</p>
+                        <Col className='col-sm-8 pe-md-0 ps-md-2 ps-3 pe-0'>
+                            <h5 className='responsiveFont text-start'>Larger storage</h5>
+                            <p className='mb-xl-4 mb-lg-3 mb-md-1 mb-0 text-start'>Extra 1TB of cloud save</p>
                         </Col>
-                        <Col className='col-3'>
+                        <Col className='col-3 col-sm-3 px-0'>
                             <p>+$2/mo</p>
                         </Col>
                     </Row>
@@ -129,33 +130,35 @@ export default function AddOns() {
                     onClick={handleActive}
                     outline
                 >
-                    <Row>
-                        <Col className='col-1'>
+                    <Row className='d-flex align-items-center'>
+                        <Col className='col-1 col-sm-1'>
                             <FormGroup check>
                                 <Input id="box3" type="checkbox"
                                 />
                                 {' '}
                             </FormGroup>
                         </Col>
-                        <Col className='col-8 pe-md-0'>
-                            <h5 className='responsiveFont'>Customizable profile</h5>
-                            <p className='mb-xl-4 mb-lg-3 mb-md-1'>Custom theme on your profile</p>
+                        <Col className='col-sm-8 pe-md-0 ps-md-2 ps-3 pe-0'>
+                            <h5 className='responsiveFont text-start'>Customizable profile</h5>
+                            <p className='mb-xl-4 mb-lg-3 mb-md-1 mb-0 text-start'>Custom theme on your profile</p>
                         </Col>
-                        <Col className='col-3'>
+                        <Col className='col-3 col-sm-3 px-0'>
                             <p>+$2/mo</p>
                         </Col>
                     </Row>
                 </Button>
             </Col>
-            <Row className='pt-0'>
-                <Col className='col-3 ps-0 backBtnCol'>
+            </FormGroup>
+            <FormGroup check className='pt-3 ps-0 mt-2'>
+            <Row className='pt-0 pe-2'>
+                <Col className='col-6 col-sm-6 col-md-3 ps-0 backBtnCol'>
                     <Button className='backBtn'>
                         <Link className='backLink' to="/plan">
                             Go Back
                         </Link>
                     </Button>
                 </Col>
-                <Col className='col-3 pe-0 nextBtnCol'>
+                <Col className='col-6 col-sm-6 col-md-3 pe-0 nextBtnCol'>
                     <Button className='nextBtn'>
                         <Link to="/finishingUp">
                             Next Step
@@ -163,6 +166,7 @@ export default function AddOns() {
                     </Button>
                 </Col>
             </Row>
+            </FormGroup>
         </Form >
     );
 }

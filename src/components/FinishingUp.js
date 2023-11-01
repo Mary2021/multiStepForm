@@ -22,10 +22,10 @@ export default function FinishingUp() {
         return (
             Object.entries(parsedObj2).map(([key, value]) => (
                 <Row key={key + '1'} className='justify-content-center px-3 pt-1'>
-                    <Col className='col-9 pe-5 text-start'>
+                    <Col className='col-8 col-md-9 ps-0 pe-md-5 pe-0 text-start'>
                         <p className='formText mb-2'>{key}</p>
                     </Col>
-                    <Col className='col-3 ps-md-0 text-end'>
+                    <Col className='col-4 col-md-3 ps-md-2 ps-0 pe-md-2 pe-0 text-end'>
                         <p className='formText mb-2'>+${value}/mo</p>
                     </Col>
                 </Row>))
@@ -38,37 +38,41 @@ export default function FinishingUp() {
                 <h2 className='formTitle'>Finishing up</h2>
                 <p className='formText'>Double-check everything looks OK before confirming.</p>
             </Container>
-            <Container className='planToggle justify-content-center'>
-                <Row className='justify-content-center px-3'>
-                    <Col className='col-9 pe-5 text-start border-bottom'>
-                        <p className='formText'>{planName} (Monthly) <br></br><Link className='backLink' to="/plan">Change</Link></p>
-                    </Col>
-                    <Col className='col-3 ps-md-0 text-end border-bottom'>
-                        <p className='formText'>${planPrice}/mo</p>
-                    </Col>
-                </Row>
-                {generateAddOnsRow()}
-            </Container>
-            <Container className='justify-content-center'>
-                <Row className='justify-content-center px-3 pt-2'>
-                    <Col className='col-9 pe-5'>
-                        <p className='formText'>Total (per month)</p>
-                    </Col>
-                    <Col className='col-3 ps-2 text-end'>
-                        <p className='formText'>${totalPrice}/mo</p>
-                    </Col>
-                </Row>
-            </Container>
-            <FormGroup check className='ps-0'>
-                <Row className='pt-5'>
-                    <Col className='col-3 ps-0 backBtnCol'>
+            <FormGroup className='rmMb'>
+                <Container className='planToggle justify-content-center'>
+                    <Row className='justify-content-center px-3'>
+                        <Col className='col-8 col-md-9 ps-0 pe-md-5 pe-0 text-start border-bottom'>
+                            <p className='formText'>{planName} (Monthly) <br></br><Link className='backLink' to="/plan">Change</Link></p>
+                        </Col>
+                        <Col className='col-4 col-md-3 ps-md-2 ps-0 pe-md-2 pe-0 text-end border-bottom'>
+                            <p className='formText'>${planPrice}/mo</p>
+                        </Col>
+                    </Row>
+                    {generateAddOnsRow()}
+                </Container>
+            </FormGroup>
+            <FormGroup className='mb-5'>
+                <Container className='justify-content-center'>
+                    <Row className='justify-content-center px-3 pt-2'>
+                        <Col className='col-8 col-md-9 ps-0 pe-md-5 pe-0'>
+                            <p className='formText'>Total (per month)</p>
+                        </Col>
+                        <Col className='col-4 col-md-3 ps-md-2 ps-0 pe-md-2 pe-0 text-end'>
+                            <p className='formText'>${totalPrice}/mo</p>
+                        </Col>
+                    </Row>
+                </Container>
+            </FormGroup>
+            <FormGroup check className='pt-5 ps-0 mt-2'>
+                <Row className='pt-0 pe-2'>
+                    <Col className='col-6 col-sm-6 col-md-3 ps-0 backBtnCol'>
                         <Button className='backBtn'>
                             <Link className='backLink' to="/addOns">
                                 Go Back
                             </Link>
                         </Button>
                     </Col>
-                    <Col className='col-3 pe-0 nextBtnCol'>
+                    <Col className='col-6 col-sm-6 col-md-3 pe-0 nextBtnCol'>
                         <Button className='nextBtn'>
                             <Link to="/summary">
                                 Confirm
