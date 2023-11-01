@@ -78,108 +78,172 @@ export default function App() {
 }
 
 function Info() {
-
-  return (
-    <div className="App">
+  if (window.innerWidth <= 576) {
+    return (
       <main>
-        <Container className='p-0'>
-          <Row>
-            <Card inverse className='formContainer'>
-              <Col sm='4'>
-                <Steps />
-              </Col>
-              <Col sm='8'>
-                <PersonalInfo />
-              </Col>
-            </Card>
-          </Row>
-        </Container>
+        <div className="App">
+          <Steps className='z-index-2' />
+          <Card className='z-index-1'>
+            <PersonalInfo />
+          </Card>
+        </div>
       </main>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div className="App">
+        <main>
+          <Container className='p-0'>
+            <Row>
+              <Card inverse className='formContainer'>
+                <Col sm='4'>
+                  <Steps />
+                </Col>
+                <Col sm='8'>
+                  <PersonalInfo />
+                </Col>
+              </Card>
+            </Row>
+          </Container>
+        </main>
+      </div>
+    )
+  }
 }
 
 function SelectPlan() {
-  return (
-    <div className="App">
+  if (window.innerWidth <= 576) {
+    return (
       <main>
-        <Container className='p-0'>
-          <Row>
-            <Card inverse className='formContainer'>
-              <Col sm='4'>
-                <Steps />
-              </Col>
-              <Col sm='8'>
-                <Plan />
-              </Col>
-            </Card>
-          </Row>
-        </Container>
+        <div className="App">
+          <Steps className='z-index-2' />
+          <Card className='z-index-1'>
+            <Plan />
+          </Card>
+        </div>
       </main>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div className="App">
+        <main>
+          <Container className='p-0'>
+            <Row>
+              <Card inverse className='formContainer'>
+                <Col sm='4'>
+                  <Steps />
+                </Col>
+                <Col sm='8'>
+                  <Plan />
+                </Col>
+              </Card>
+            </Row>
+          </Container>
+        </main>
+      </div>
+    )
+  }
 }
 
 function PickAddOns() {
-  return (
-    <div className="App">
+  if (window.innerWidth <= 576) {
+    return (
       <main>
-        <Container className='p-0'>
-          <Row>
-            <Card inverse className='formContainer'>
-              <Col sm='4'>
-                <Steps />
-              </Col>
-              <Col sm='8'>
-                <AddOns />
-              </Col>
-            </Card>
-          </Row>
-        </Container>
+        <div className="App">
+          <Steps className='z-index-2' />
+          <Card className='z-index-1'>
+            <AddOns />
+          </Card>
+        </div>
       </main>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div className="App">
+        <main>
+          <Container className='p-0'>
+            <Row>
+              <Card inverse className='formContainer'>
+                <Col sm='4'>
+                  <Steps />
+                </Col>
+                <Col sm='8'>
+                  <AddOns />
+                </Col>
+              </Card>
+            </Row>
+          </Container>
+        </main>
+      </div>
+    )
+  }
 }
 
 function FinishUp() {
-  return (
-    <div className="App">
+  if (window.innerWidth <= 576) {
+    return (
       <main>
-        <Container className='p-0'>
-          <Row>
-            <Card inverse className='formContainer'>
-              <Col sm='4'>
-                <Steps />
-              </Col>
-              <Col sm='8'>
-                <FinishingUp />
-              </Col>
-            </Card>
-          </Row>
-        </Container>
+        <div className="App">
+          <Steps className='z-index-2' />
+          <Card className='z-index-1'>
+            <FinishingUp />
+          </Card>
+        </div>
       </main>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div className="App">
+        <main>
+          <Container className='p-0'>
+            <Row>
+              <Card inverse className='formContainer'>
+                <Col sm='4'>
+                  <Steps />
+                </Col>
+                <Col sm='8'>
+                  <FinishingUp />
+                </Col>
+              </Card>
+            </Row>
+          </Container>
+        </main>
+      </div>
+    )
+  }
 }
 
 
 function Sum() {
-  return (
-    <div className="App">
+  if (window.innerWidth <= 576) {
+    return (
       <main>
-        <Container className='p-0'>
-          <Row>
-            <Card inverse className='formContainer'>
-              <Col sm='4'>
-                <Steps />
-              </Col>
-              <Col sm='8'>
-                <Summary />
-              </Col>
-            </Card>
-          </Row>
-        </Container>
+        <div className="SumApp">
+          <Steps className='z-index-2' />
+          <Card className='z-index-1'>
+            <Summary />
+          </Card>
+        </div>
       </main>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div className="App">
+        <main>
+          <Container className='p-0'>
+            <Row>
+              <Card inverse className='formContainer'>
+                <Col sm='4'>
+                  <Steps />
+                </Col>
+                <Col sm='8'>
+                  <Summary />
+                </Col>
+              </Card>
+            </Row>
+          </Container>
+        </main>
+      </div>
+    )
+  }
 }
