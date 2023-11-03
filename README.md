@@ -23,7 +23,7 @@ Users should be able to:
 - Complete each step of the sequence
 - Go back to a previous step to update their selections
 - See a summary of their selections on the final step and confirm their order
-- View the optimal layout for the interface depending on their device's screen size (at the moment only screen width 1440px available)
+- View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page (some hover and focus states yet to come)
 
 Yet to come:

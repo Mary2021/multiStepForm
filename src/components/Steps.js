@@ -44,42 +44,65 @@ export default function Step() {
           src="../multiStepForm/images/bg-sidebar-desktop.svg"
         />
         <CardImgOverlay>
-          <Badge>
-            1
-          </Badge>
-          <CardTitle tag="h6">
-            Step 1
-          </CardTitle>
-          <CardText>
-            Your info
-          </CardText>
-          <Badge>
-            2
-          </Badge>
-          <CardTitle tag="h6">
-            Step 2
-          </CardTitle>
-          <CardText>
-            Select plan
-          </CardText>
-          <Badge>
-            3
-          </Badge>
-          <CardTitle tag="h6">
-            Step 3
-          </CardTitle>
-          <CardText>
-            Add-ons
-          </CardText>
-          <Badge>
-            4
-          </Badge>
-          <CardTitle tag="h6">
-            Step 4
-          </CardTitle>
-          <CardText>
-            Summary
-          </CardText>
+          <Row className='mb-3'>
+            <Col className='col-md-2'>
+              <Badge className='badge'>
+                1
+              </Badge>
+            </Col>
+            <Col className='col-md-10 ps-md-0'>
+              <CardTitle tag="h6">
+                Step 1
+              </CardTitle>
+              <CardText>
+                Your info
+              </CardText>
+            </Col>
+          </Row>
+          <Row className='mb-3'>
+            <Col className='col-md-2'>
+              <Badge className='badge'>
+                2
+              </Badge>
+            </Col>
+            <Col className='col-md-10 ps-md-0'>
+              <CardTitle tag="h6">
+                Step 2
+              </CardTitle>
+              <CardText>
+                Select plan
+              </CardText>
+            </Col></Row>
+          <Row className='mb-3'>
+            <Col className='col-md-2'>
+              <Badge className='badge'>
+                3
+              </Badge>
+            </Col>
+            <Col className='col-md-10 ps-md-0'>
+              <CardTitle tag="h6">
+                Step 3
+              </CardTitle>
+              <CardText>
+                Add-ons
+              </CardText>
+            </Col>
+          </Row>
+          <Row className='mb-3'>
+            <Col className='col-md-2'>
+              <Badge className='badge'>
+                4
+              </Badge>
+            </Col>
+            <Col className='col-md-10 ps-md-0'>
+              <CardTitle tag="h6">
+                Step 4
+              </CardTitle>
+              <CardText>
+                Summary
+              </CardText>
+            </Col>
+          </Row>
         </CardImgOverlay>
       </Container>
     );
