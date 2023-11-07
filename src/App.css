@@ -54,19 +54,6 @@
   color: hsl(0, 0%, 100%);
 }
 
-/* .form-switch .form-check-input {
-  position: absolute;
-  right: calc(50% - 5%);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
-  background-color: hsl(213, 96%, 18%);
-}
-
-.form-check-input:focus {
-  border-color: none;
-  outline: 0;
-  box-shadow: none;
-} */
-
 .planBtn {
   border: solid;
   background-color: hsl(0, 0%, 100%);
@@ -78,462 +65,6 @@
   padding-left: 4%;
   padding-right: 4%;
   border-color: hsl(213, 96%, 18%);
-}
-
-@media screen and (max-width: 1500px) and (min-width: 1301px) {
-  .App {
-    background-color: #e3e4e6;
-    padding-top: 7%;
-    padding-bottom: 7%;
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-
-  .card-img-overlay {
-    text-align: start;
-    top: 10%;
-    left: 8%;
-    width: 30%;
-    height: 80%;
-  }
-
-  .badge {
-    position: absolute;
-    left: -2%;
-    background-color: transparent !important;
-    border: solid;
-    border-width: 0.15em;
-    border-radius: 90%;
-    border-color: #e3e4e6;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 4%;
-    padding-right: 4%;
-  }
-
-  .responsiveFont,
-  .card-title,
-  .card-text {
-    font-size: 130%;
-  }
-  
-  .form-switch .form-check-input {
-    position: absolute;
-    right: calc(50% - 18%);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
-    background-color: hsl(213, 96%, 18%);
-  }
-  
-  .form-check-input:focus {
-    border-color: none;
-    outline: 0;
-    box-shadow: none;
-  }
-
-  .nextBtnCol {
-    display: flex;
-    position: absolute;
-    right: 8rem;
-    bottom: 2rem;
-    align-items: center;
-    justify-content: right;
-    margin-bottom: 0px !important;
-  }
-
-  .backBtnCol {
-    display: flex;
-    position: absolute;
-    left: 30rem;
-    bottom: 2rem;
-    align-items: center;
-    justify-content: left;
-  }
-}
-
-@media screen and (max-width: 1300px) and (min-width: 1200px) {
-  .App {
-    background-color: #e3e4e6;
-    padding-top: 7%;
-    padding-bottom: 7%;
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-
-  .card-img-overlay {
-    text-align: start;
-    top: 10%;
-    left: 8%;
-    width: 30%;
-    height: 80%;
-  }
-
-  .badge {
-    position: absolute;
-    left: -2%;
-    background-color: transparent !important;
-    border: solid;
-    border-width: 0.15em;
-    border-radius: 90%;
-    border-color: #e3e4e6;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 4%;
-    padding-right: 4%;
-  }
-
-  .responsiveFont {
-    font-size: 130%;
-  }
-
-  .form-switch .form-check-input {
-    position: absolute;
-    right: calc(50% - 18%);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
-    background-color: hsl(213, 96%, 18%);
-  }
-  
-  .form-check-input:focus {
-    border-color: none;
-    outline: 0;
-    box-shadow: none;
-  }
-
-  .nextBtnCol {
-    display: flex;
-    position: absolute;
-    right: 8rem;
-    bottom: 2rem;
-    align-items: center;
-    justify-content: right;
-    margin-bottom: 0px !important;
-  }
-
-  .backBtnCol {
-    display: flex;
-    position: absolute;
-    left: 27rem;
-    bottom: 2rem;
-    align-items: center;
-    justify-content: left;
-  }
-}
-
-@media screen and (max-width: 1199px) and (min-width: 992px) {
-  .App {
-    background-color: #e3e4e6;
-    padding-top: 7%;
-    padding-bottom: 7%;
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-  
-  .card-img-overlay {
-    text-align: start;
-    top: 10%;
-    left: 8%;
-    width: 30%;
-    height: 80%;
-  }
-
-  .badge {
-    position: absolute;
-    left: -2%;
-    background-color: transparent !important;
-    border: solid;
-    border-width: 0.15em;
-    border-radius: 90%;
-    border-color: #e3e4e6;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 4%;
-    padding-right: 4%;
-  }
-
-  .responsiveFont {
-    font-size: 120%;
-  }
-
-  .form-switch .form-check-input {
-    position: absolute;
-    right: calc(50% - 18%);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
-    background-color: hsl(213, 96%, 18%);
-  }
-  
-  .form-check-input:focus {
-    border-color: none;
-    outline: 0;
-    box-shadow: none;
-  }
-
-  .nextBtnCol {
-    display: flex;
-    position: absolute;
-    right: 3rem;
-    bottom: 1rem;
-    align-items: center;
-    justify-content: right;
-    margin-bottom: 0px !important;
-  }
-
-  .backBtnCol {
-    display: flex;
-    position: absolute;
-    left: 19rem;
-    bottom: 1rem;
-    align-items: center;
-    justify-content: left;
-  }
-}
-
-@media screen and (max-width: 991px) and (min-width: 767px) {
-  .App {
-    background-color: #e3e4e6;
-    padding-top: 7%;
-    padding-bottom: 7%;
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-
-  .card-img-overlay {
-    text-align: start;
-    top: 10%;
-    left: 8%;
-    width: 30%;
-    height: 80%;
-  }
-
-  .badge {
-    position: absolute;
-    left: -2%;
-    background-color: transparent !important;
-    border: solid;
-    border-width: 0.15em;
-    border-radius: 90%;
-    border-color: #e3e4e6;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 4%;
-    padding-right: 4%;
-  }
-
-  .responsiveFont {
-    font-size: 100%;
-  }
-
-  .form-switch .form-check-input {
-    position: absolute;
-    right: calc(50% - 18%);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
-    background-color: hsl(213, 96%, 18%);
-  }
-  
-  .form-check-input:focus {
-    border-color: none;
-    outline: 0;
-    box-shadow: none;
-  }
-
-  .card-title,
-  .card-text {
-    font-size: 80%;
-  }
-
-  .nextBtnCol {
-    display: flex;
-    position: absolute;
-    right: 1.4rem;
-    bottom: 0.6rem;
-    align-items: center;
-    justify-content: right;
-    margin-bottom: 0px !important;
-  }
-
-  .backBtnCol {
-    display: flex;
-    position: absolute;
-    left: 13rem;
-    bottom: 0.6rem;
-    align-items: center;
-    justify-content: left;
-  }
-
-}
-
-@media screen and (max-width: 766px) and (min-width: 577px) {
-  .App {
-    background-color: #e3e4e6;
-    padding-top: 7%;
-    padding-bottom: 7%;
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-
-  .card-img-overlay {
-    text-align: start;
-    top: 10%;
-    left: 10%;
-    width: 30%;
-    height: 80%;
-  }
-
-  .badge {
-    position: absolute;
-    left: -2%;
-    background-color: transparent !important;
-    border: solid;
-    border-width: 0.15em;
-    border-radius: 90%;
-    border-color: #e3e4e6;
-    padding-top: 0.6%;
-    padding-bottom: 0.6%;
-    padding-left: 1%;
-    padding-right: 1%;
-  }
-
-  .responsiveFont {
-    font-size: 90%;
-  }
-
-  .form-switch .form-check-input {
-    position: absolute;
-    right: calc(50% - 5%);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
-    background-color: hsl(213, 96%, 18%);
-  }
-  
-  .form-check-input:focus {
-    border-color: none;
-    outline: 0;
-    box-shadow: none;
-  }
-
-  .card-title,
-  .card-text {
-    font-size: 80%;
-  }
-
-  .nextBtnCol {
-    display: flex;
-    position: absolute;
-    right: 2rem;
-    bottom: 10px;
-    align-items: center;
-    justify-content: right;
-    margin-bottom: 0px !important;
-  }
-
-  .backBtnCol {
-    display: flex;
-    position: absolute;
-    left: 13rem;
-    bottom: 0.6rem;
-    align-items: center;
-    justify-content: left;
-  }
-}
-
-@media screen and (max-width: 576px) and (min-width: 320px) {
-  .App {
-    height: 120vh;
-    background-color: #e3e4e6;
-    padding-top: 0%;
-    padding-bottom: 100%;
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-
-  .SumApp {
-    height: 100vh;
-    background-color: #e3e4e6;
-    padding-top: 0%;
-    padding-bottom: 100%;
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-
-  .card-img-overlay {
-    text-align: center;
-    top: 5%;
-    bottom: 90%;
-    left: 20%;
-    right: 20%;
-  }
-
-  .badge {
-    top: 6%;
-    left: 6%;
-    background-color: transparent !important;
-    border: solid;
-    border-width: 0.15em;
-    border-radius: 90%;
-    border-color: #e3e4e6;
-    padding-top: 16%;
-    padding-bottom: 16%;
-    padding-left: 24%;
-    padding-right: 24%;
-  }
-
-  .z-index-2 {
-    z-index: 2;
-  }
-  
-  .z-index-1 {
-    z-index: 1;
-  }
-
-  .card {
-    position: absolute;
-    top: 16%;
-    left: 5%;
-    right: 5%;
-    padding: 5%;
-  }
-
-  .responsiveFont {
-    font-size: 100%;
-  }
-
-  .form-switch .form-check-input {
-    position: absolute;
-    right: calc(50% - 5%);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
-    background-color: hsl(213, 96%, 18%);
-  }
-  
-  .form-check-input:focus {
-    border-color: none;
-    outline: 0;
-    box-shadow: none;
-  }
-
-  .rmMb {
-    margin-bottom: 1% !important;
-  }
-
-  .nextBtnCol {
-    display: flex;
-    justify-content: right;
-    /*display: flex;
-    position: absolute;
-    right: 1rem;
-    bottom: 10px;
-    align-items: center;
-    justify-content: right;
-    margin-bottom: 0px !important;*/
-  }
-
-  .backBtnCol {
-    display: flex;
-    justify-content: left;
-    
-    /*display: flex;
-    position: absolute;
-    left: 1rem;
-    bottom: 0.6rem;
-    align-items: center;
-    justify-content: left;*/
-  }
 }
 
 .btn.active {
@@ -601,4 +132,541 @@
 .sumContainer {
   margin-top: 15%;
   text-align: center;
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1301px) {
+  .App {
+    background-color: #e3e4e6;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
+  .card-img-overlay {
+    text-align: start;
+    top: 10%;
+    left: 8%;
+    width: 30%;
+    height: 80%;
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0%;
+  }
+
+  .flexCol {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
+
+  .pagination>li,
+  .pagination>li>span {
+    border-radius: 50% !important;
+    border: solid;
+    border-color: hsl(0, 0%, 100%);
+    margin: 0% 18% 40% 18%;
+    padding: 3px 12px;
+    color:  hsl(0, 0%, 100%);
+    background-color: hsl(243, 100%, 62%);
+  }
+
+  .pagination .disabled span,
+  .pagination .disabled a {
+    color:  hsl(0, 0%, 100%);
+    background-color: transparent;
+    border: none;
+    padding: 3px 4px;
+  }
+
+  .responsiveFont,
+  .card-title,
+  .card-text {
+    font-size: 130%;
+  }
+
+  .form-switch .form-check-input {
+    position: absolute;
+    right: calc(50% - 18%);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
+    background-color: hsl(213, 96%, 18%);
+  }
+
+  .form-check-input:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .nextBtnCol {
+    display: flex;
+    position: absolute;
+    right: 8rem;
+    bottom: 2rem;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 0px !important;
+  }
+
+  .backBtnCol {
+    display: flex;
+    position: absolute;
+    left: 30rem;
+    bottom: 2rem;
+    align-items: center;
+    justify-content: left;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 1200px) {
+  .App {
+    background-color: #e3e4e6;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
+  .card-img-overlay {
+    text-align: start;
+    top: 10%;
+    left: 8%;
+    width: 30%;
+    height: 80%;
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0%;
+  }
+
+  .flexCol {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8%;
+  }
+
+  .pagination>li,
+  .pagination>li>span {
+    border-radius: 50% !important;
+    border: solid;
+    border-color: hsl(0, 0%, 100%);
+    margin: 0% 18% 30% 18%;
+    padding: 3px 10px;
+    color:  hsl(0, 0%, 100%);
+    background-color: hsl(243, 100%, 62%);
+  }
+
+  .pagination .disabled span,
+  .pagination .disabled a {
+    color:  hsl(0, 0%, 100%);
+    background-color: transparent;
+    border: none;
+    padding: 3px 4px;
+  }
+
+  .responsiveFont {
+    font-size: 130%;
+  }
+
+  .form-switch .form-check-input {
+    position: absolute;
+    right: calc(50% - 18%);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
+    background-color: hsl(213, 96%, 18%);
+  }
+
+  .form-check-input:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .nextBtnCol {
+    display: flex;
+    position: absolute;
+    right: 8rem;
+    bottom: 2rem;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 0px !important;
+  }
+
+  .backBtnCol {
+    display: flex;
+    position: absolute;
+    left: 27rem;
+    bottom: 2rem;
+    align-items: center;
+    justify-content: left;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .App {
+    background-color: #e3e4e6;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
+  .card-img-overlay {
+    text-align: start;
+    top: 10%;
+    left: 8%;
+    width: 30%;
+    height: 80%;
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0%;
+  }
+
+  .flexCol {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12%;
+  }
+
+  .pagination>li,
+  .pagination>li>span {
+    border-radius: 50% !important;
+    border: solid;
+    border-color: hsl(0, 0%, 100%);
+    margin: 0% 18% 30% 18%;
+    padding: 3px 12px;
+    color:  hsl(0, 0%, 100%);
+    background-color: hsl(243, 100%, 62%);
+  }
+
+  .pagination .disabled span,
+  .pagination .disabled a {
+    color:  hsl(0, 0%, 100%);
+    background-color: transparent;
+    border: none;
+    padding: 3px 4px;
+  }
+
+  .responsiveFont {
+    font-size: 120%;
+  }
+
+  .form-switch .form-check-input {
+    position: absolute;
+    right: calc(50% - 18%);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
+    background-color: hsl(213, 96%, 18%);
+  }
+
+  .form-check-input:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .nextBtnCol {
+    display: flex;
+    position: absolute;
+    right: 3rem;
+    bottom: 1rem;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 0px !important;
+  }
+
+  .backBtnCol {
+    display: flex;
+    position: absolute;
+    left: 19rem;
+    bottom: 1rem;
+    align-items: center;
+    justify-content: left;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 767px) {
+  .App {
+    background-color: #e3e4e6;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
+  .card-img-overlay {
+    text-align: start;
+    top: 10%;
+    left: 8%;
+    width: 30%;
+    height: 80%;
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0%;
+  }
+
+  .flexCol {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14%;
+  }
+
+  .pagination>li,
+  .pagination>li>span {
+    border-radius: 50% !important;
+    border: solid;
+    border-color: hsl(0, 0%, 100%);
+    margin: 0% 15% 20% 15%;
+    padding: 3px 12px;
+    color:  hsl(0, 0%, 100%);
+    background-color: hsl(243, 100%, 62%);
+  }
+
+  .pagination .disabled span,
+  .pagination .disabled a {
+    color:  hsl(0, 0%, 100%);
+    background-color: transparent;
+    border: none;
+    padding: 3px 4px;
+  }
+
+  .responsiveFont {
+    font-size: 100%;
+  }
+
+  .form-switch .form-check-input {
+    position: absolute;
+    right: calc(50% - 18%);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
+    background-color: hsl(213, 96%, 18%);
+  }
+
+  .form-check-input:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .card-title,
+  .card-text {
+    font-size: 80%;
+  }
+
+  .nextBtnCol {
+    display: flex;
+    position: absolute;
+    right: 1.4rem;
+    bottom: 0.6rem;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 0px !important;
+  }
+
+  .backBtnCol {
+    display: flex;
+    position: absolute;
+    left: 13rem;
+    bottom: 0.6rem;
+    align-items: center;
+    justify-content: left;
+  }
+}
+
+@media screen and (max-width: 766px) and (min-width: 577px) {
+  .App {
+    background-color: #e3e4e6;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
+  .card-img-overlay {
+    text-align: start;
+    top: 10%;
+    left: 10%;
+    width: 30%;
+    height: 80%;
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15%;
+  }
+
+  .flexCol {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14%;
+  }
+
+  .pagination>li,
+  .pagination>li>span {
+    border-radius: 50% !important;
+    border: solid;
+    border-color: hsl(0, 0%, 100%);
+    margin: 0 5px;
+    padding: 5px 8px;
+    color:  hsl(0, 0%, 100%);
+    background-color: hsl(243, 100%, 62%);
+  }
+
+  .pagination .disabled span,
+  .pagination .disabled a {
+    color:  hsl(0, 0%, 100%);
+    background-color: transparent;
+    border: none;
+    padding: 3px 4px;
+  }
+
+  .responsiveFont {
+    font-size: 90%;
+  }
+
+  .form-switch .form-check-input {
+    position: absolute;
+    right: calc(50% - 5%);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
+    background-color: hsl(213, 96%, 18%);
+  }
+
+  .form-check-input:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .card-title,
+  .card-text {
+    font-size: 80%;
+  }
+
+  .nextBtnCol {
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    bottom: 10px;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 0px !important;
+  }
+
+  .backBtnCol {
+    display: flex;
+    position: absolute;
+    left: 13rem;
+    bottom: 0.6rem;
+    align-items: center;
+    justify-content: left;
+  }
+}
+
+@media screen and (max-width: 576px) and (min-width: 320px) {
+  .App {
+    height: 120vh;
+    background-color: #e3e4e6;
+    padding-top: 0%;
+    padding-bottom: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .SumApp {
+    height: 100vh;
+    background-color: #e3e4e6;
+    padding-top: 0%;
+    padding-bottom: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .card-img-overlay {
+    top: 5%;
+    bottom: 90%;
+    left: 20%;
+    right: 20%;
+  }
+
+  .pagination {
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .pagination>li,
+  .pagination>li>span {
+    border-radius: 50% !important;
+    border: solid;
+    border-color: hsl(0, 0%, 100%);
+    margin: 0;
+    margin-right: 5%;
+    padding: 1px 8px;
+    color:  hsl(0, 0%, 100%);
+    background-color: hsl(243, 100%, 62%);
+  }
+
+  .pagination .disabled span,
+  .pagination .disabled a {
+    color:  hsl(0, 0%, 100%);
+    background-color: transparent;
+    border: none;
+    padding: 3px 4px;
+  }
+
+  .z-index-2 {
+    z-index: 2;
+  }
+
+  .z-index-1 {
+    z-index: 1;
+  }
+
+  .card {
+    position: absolute;
+    top: 16%;
+    left: 5%;
+    right: 5%;
+    padding: 5%;
+  }
+
+  .responsiveFont {
+    font-size: 100%;
+  }
+
+  .form-switch .form-check-input {
+    position: absolute;
+    right: calc(50% - 5%);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/%3e%3c/svg%3e");
+    background-color: hsl(213, 96%, 18%);
+  }
+
+  .form-check-input:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .rmMb {
+    margin-bottom: 1% !important;
+  }
+
+  .nextBtnCol {
+    display: flex;
+    justify-content: right;
+  }
+
+  .backBtnCol {
+    display: flex;
+    justify-content: left;
+  }
 }

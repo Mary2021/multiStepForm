@@ -1,9 +1,89 @@
 import React from 'react';
 import '../App.css';
-import { CardImg, Badge, CardImgOverlay, CardText, CardTitle, Container, Row, Col } from 'reactstrap';
+import { CardImg, CardImgOverlay, CardText, CardTitle, Container, Row, Col, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
 export default function Step() {
+  //mobile
   if (window.innerWidth <= 576) {
+    const Items = () => {
+      const list = [1, 2, 3, 4]
+      if (window.location.pathname === '/multiStepForm') {
+        const listItems = list.map((item, index) =>
+          (index === 0) ?
+            (<PaginationItem key={index + 1} disabled style={{ backgroundColor: 'hsl(206, 94%, 87%)' }}>
+              <PaginationLink href="#" style={{ color: 'hsl(213, 96%, 18%)' }}>
+                {item}
+              </PaginationLink>
+            </PaginationItem>)
+            :
+            (<PaginationItem key={index + 1} disabled>
+              <PaginationLink href="#">
+                {item}
+              </PaginationLink>
+            </PaginationItem>)
+        )
+        return (
+          listItems
+        )
+      }
+      if (window.location.pathname === '/multiStepForm/plan') {
+        const listItems = list.map((item, index) =>
+          (index === 1) ?
+            (<PaginationItem key={index + 1} disabled style={{ backgroundColor: 'hsl(206, 94%, 87%)' }}>
+              <PaginationLink href="#" style={{ color: 'hsl(213, 96%, 18%)' }}>
+                {item}
+              </PaginationLink>
+            </PaginationItem>)
+            :
+            (<PaginationItem key={index + 1} disabled>
+              <PaginationLink href="#">
+                {item}
+              </PaginationLink>
+            </PaginationItem>)
+        )
+        return (
+          listItems
+        )
+      }
+      if (window.location.pathname === '/multiStepForm/addOns') {
+        const listItems = list.map((item, index) =>
+          (index === 2) ?
+            (<PaginationItem key={index + 1} disabled style={{ backgroundColor: 'hsl(206, 94%, 87%)' }}>
+              <PaginationLink href="#" style={{ color: 'hsl(213, 96%, 18%)' }}>
+                {item}
+              </PaginationLink>
+            </PaginationItem>)
+            :
+            (<PaginationItem key={index + 1} disabled>
+              <PaginationLink href="#">
+                {item}
+              </PaginationLink>
+            </PaginationItem>)
+        )
+        return (
+          listItems
+        )
+      }
+      if (window.location.pathname === '/multiStepForm/finishingUp') {
+        const listItems = list.map((item, index) =>
+          (index === 3) ?
+            (<PaginationItem key={index + 1} disabled style={{ backgroundColor: 'hsl(206, 94%, 87%)' }}>
+              <PaginationLink href="#" style={{ color: 'hsl(213, 96%, 18%)' }}>
+                {item}
+              </PaginationLink>
+            </PaginationItem>)
+            :
+            (<PaginationItem key={index + 1} disabled>
+              <PaginationLink href="#">
+                {item}
+              </PaginationLink>
+            </PaginationItem>)
+        )
+        return (
+          listItems
+        )
+      }
+    }
     return (
       <Container className='m-0 p-0'>
         <CardImg
@@ -11,96 +91,140 @@ export default function Step() {
           src="../multiStepForm/images/bg-sidebar-mobile.svg"
         />
         <CardImgOverlay>
-          <Row>
-            <Col className='col-3 p-0'>
-              <Badge>
-                1
-              </Badge>
-            </Col>
-            <Col className='col-3 p-0'>
-              <Badge>
-                2
-              </Badge>
-            </Col>
-            <Col className='col-3 p-0'>
-              <Badge>
-                3
-              </Badge>
-            </Col>
-            <Col className='col-3 p-0'>
-              <Badge>
-                4
-              </Badge>
-            </Col>
-          </Row>
+          <Pagination>
+            {Items()}
+          </Pagination>
         </CardImgOverlay>
       </Container>
     )
   } else {
+    //tablet & desktop
+    const list = [1, 2, 3, 4]
+    const StepNumbers = () => {
+      if (window.location.pathname === '/multiStepForm') {
+        const listItems = list.map((item, index) =>
+          (index === 0) ?
+            (
+              <PaginationItem key={index + 1} disabled style={{ backgroundColor: 'hsl(206, 94%, 87%)' }}>
+                <PaginationLink href="#" style={{ color: 'hsl(213, 96%, 18%)' }}>
+                  {item}
+                </PaginationLink>
+              </PaginationItem>
+            )
+            :
+            (
+              <PaginationItem key={index + 1} disabled>
+                <PaginationLink href="#">
+                  {item}
+                </PaginationLink>
+              </PaginationItem>
+            )
+        )
+        return (
+          listItems
+        )
+      }
+      if (window.location.pathname === '/multiStepForm/plan') {
+        const listItems = list.map((item, index) =>
+          (index === 1) ?
+            (
+              <PaginationItem key={index + 1} disabled style={{ backgroundColor: 'hsl(206, 94%, 87%)' }}>
+                <PaginationLink href="#" style={{ color: 'hsl(213, 96%, 18%)' }}>
+                  {item}
+                </PaginationLink>
+              </PaginationItem>
+            )
+            :
+            (
+              <PaginationItem key={index + 1} disabled>
+                <PaginationLink href="#">
+                  {item}
+                </PaginationLink>
+              </PaginationItem>
+            )
+        )
+        return (
+          listItems
+        )
+      }
+      if (window.location.pathname === '/multiStepForm/addOns') {
+        const listItems = list.map((item, index) =>
+          (index === 2) ?
+            (
+              <PaginationItem key={index + 1} disabled style={{ backgroundColor: 'hsl(206, 94%, 87%)' }}>
+                <PaginationLink href="#" style={{ color: 'hsl(213, 96%, 18%)' }}>
+                  {item}
+                </PaginationLink>
+              </PaginationItem>
+            )
+            :
+            (
+              <PaginationItem key={index + 1} disabled>
+                <PaginationLink href="#">
+                  {item}
+                </PaginationLink>
+              </PaginationItem>
+            )
+        )
+        return (
+          listItems
+        )
+      }
+      if (window.location.pathname === '/multiStepForm/finishingUp') {
+        const listItems = list.map((item, index) =>
+          (index === 3) ?
+            (
+              <PaginationItem key={index + 1} disabled style={{ backgroundColor: 'hsl(206, 94%, 87%)' }}>
+                <PaginationLink href="#" style={{ color: 'hsl(213, 96%, 18%)' }}>
+                  {item}
+                </PaginationLink>
+              </PaginationItem>
+            )
+            :
+            (
+              <PaginationItem key={index + 1} disabled>
+                <PaginationLink href="#">
+                  {item}
+                </PaginationLink>
+              </PaginationItem>
+            )
+        )
+        return (
+          listItems
+        )
+      }
+    }
+    const StepText = () => {
+      const list = [1, 2, 3, 4]
+      const text = ['Your info', 'Select plan', 'Add-ons', 'Summary']
+      const titleTextItems = list.map((item, index) => {
+        let t = text[index]
+        return (<Col key={index} className='flexCol'>
+          <CardTitle tag="h6">
+            Step {item}
+          </CardTitle>
+          <CardText >
+            {t}
+          </CardText>
+        </Col>)
+      })
+      return (titleTextItems)
+    }
     return (
       <Container className='m-0 p-0'>
         <CardImg
           alt="Card image cap"
           src="../multiStepForm/images/bg-sidebar-desktop.svg"
         />
-        <CardImgOverlay>
-          <Row className='mb-3'>
-            <Col className='col-md-2'>
-              <Badge className='badge'>
-                1
-              </Badge>
+        <CardImgOverlay className='ps-md-0'>
+          <Row>
+            <Col className='col-xl-3 col-md-4 col-sm-3 ps-sm-0'>
+              <Pagination>
+                {StepNumbers()}
+              </Pagination>
             </Col>
-            <Col className='col-md-10 ps-md-0'>
-              <CardTitle tag="h6">
-                Step 1
-              </CardTitle>
-              <CardText>
-                Your info
-              </CardText>
-            </Col>
-          </Row>
-          <Row className='mb-3'>
-            <Col className='col-md-2'>
-              <Badge className='badge'>
-                2
-              </Badge>
-            </Col>
-            <Col className='col-md-10 ps-md-0'>
-              <CardTitle tag="h6">
-                Step 2
-              </CardTitle>
-              <CardText>
-                Select plan
-              </CardText>
-            </Col></Row>
-          <Row className='mb-3'>
-            <Col className='col-md-2'>
-              <Badge className='badge'>
-                3
-              </Badge>
-            </Col>
-            <Col className='col-md-10 ps-md-0'>
-              <CardTitle tag="h6">
-                Step 3
-              </CardTitle>
-              <CardText>
-                Add-ons
-              </CardText>
-            </Col>
-          </Row>
-          <Row className='mb-3'>
-            <Col className='col-md-2'>
-              <Badge className='badge'>
-                4
-              </Badge>
-            </Col>
-            <Col className='col-md-10 ps-md-0'>
-              <CardTitle tag="h6">
-                Step 4
-              </CardTitle>
-              <CardText>
-                Summary
-              </CardText>
+            <Col className='col-xl-9 col-md-8 col-sm-9 ps-md-0'>
+              {StepText()}
             </Col>
           </Row>
         </CardImgOverlay>
