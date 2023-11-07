@@ -101,7 +101,7 @@ export default function Step() {
     //tablet & desktop
     const list = [1, 2, 3, 4]
     const StepNumbers = () => {
-      if (window.location.pathname === '/multiStepForm') {
+      if (window.location.pathname === '/multiStepForm' || window.location.pathname === '/multiStepForm/') {
         const listItems = list.map((item, index) =>
           (index === 0) ?
             (
