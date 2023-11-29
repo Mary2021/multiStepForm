@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/App.css';
 import { Button, Col, Form, FormGroup, Input, Row } from 'reactstrap';
@@ -8,10 +8,6 @@ export default function AddOns() {
     const [box2, setBox2] = useState(false);
     const [box3, setBox3] = useState(false);
     const [formData, setFormData] = useState({});
-
-    //let addOnsObj = window.localStorage.getItem('addOns')
-    //let parsedObj = JSON.parse(addOnsObj)
-    //const [formData, setFormData] = useState(parsedObj);
 
     const handleActive = (event) => {
         let id = event.target.id
@@ -69,10 +65,6 @@ export default function AddOns() {
     const handleSubmit = (e) => {
         localStorage.setItem("addOns", JSON.stringify(formData));
     }
-
-    // useEffect(() => {
-    //     localStorage.setItem("addOns", JSON.stringify(formData));
-    // }, [formData]);
 
     return (
         <Form className='pt-xl-5 pb-xl-0 px-xl-5 mx-xl-5 pt-lg-3 pb-lg-0 px-lg-4 mx-lg-3 pt-md-3 pb-md-0 px-md-3 mx-md-0 h-100'>

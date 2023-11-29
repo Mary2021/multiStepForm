@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from 'react';
+import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/App.css';
 import iconArcade from '../assets/images/icon-arcade.svg'
@@ -66,25 +66,6 @@ export default function Plan() {
     const handleSubmit = (e) => {
         localStorage.setItem("plan", JSON.stringify(formData));
     }
-
-    // useEffect(() => {
-        
-    //     // if (defaultData === null ) {
-    //         //setDefaultData({ arcade: 9});
-    //     // } else {
-    //         let planObj = window.localStorage.getItem('plan')
-    //         let parsedObj = JSON.parse(planObj)
-    //     //let planName = Object.keys(parsedObj)[0].charAt(0).toUpperCase() + Object.keys(parsedObj)[0].slice(1);
-    //     //let planPrice = Object.values(parsedObj)[0]
-    //     setDefaultData(parsedObj);
-    //     // }
-    // }, []);
-
-    // useEffect(() => {
-    //     window.localStorage.setItem("plan", JSON.stringify(formData));
-    // }, [formData]);
-
-    console.log(formData)
 
     const createRows = () => {
         if (window.innerWidth <= 576) {
