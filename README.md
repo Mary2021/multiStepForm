@@ -25,8 +25,6 @@ Users should be able to:
 - See a summary of their selections on the final step and confirm their order
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page (some hover and focus states yet to come)
-
-Yet to come:
 - Receive form validation messages if:
   - A field has been missed
   - The email address is not formatted correctly
@@ -48,6 +46,7 @@ Yet to come:
 - [Create React App](https://create-react-app.dev/docs/getting-started). [Read more](#getting-started-with-create-react-app)
 - [React Bootstrap](https://reactstrap.github.io/?path=/story/home-installation--page)
 - CSS custom properties
+- [Redux](https://redux.js.org/)
 
 ### Useful links
 
@@ -56,8 +55,6 @@ Yet to come:
 - [Reactstrap button toggle active class](https://stackoverflow.com/questions/54103302/react-toggle-active-class-between-multiple-reactstrap-buttons)
 - [Re render React component on window resize](https://www.pluralsight.com/guides/re-render-react-component-on-window-resize)
 - [Using localstorage with React hooks](https://blog.logrocket.com/using-localstorage-react-hooks/), [See also](https://stackoverflow.com/questions/19635077/adding-objects-to-array-in-localstorage), [and this too](https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem)
-
-
 
 ## Author
 

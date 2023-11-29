@@ -1,5 +1,7 @@
 import React from 'react';
-import '../App.css';
+import '../style/App.css';
+import bgSidebarMobile from '../assets/images/bg-sidebar-mobile.svg'
+import bgSidebarDesktop from '../assets/images/bg-sidebar-desktop.svg'
 import { CardImg, CardImgOverlay, CardText, CardTitle, Container, Row, Col, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
 export default function Step() {
@@ -88,7 +90,7 @@ export default function Step() {
       <Container className='m-0 p-0'>
         <CardImg
           alt="Card image cap"
-          src="../multiStepForm/images/bg-sidebar-mobile.svg"
+          src={bgSidebarMobile}
         />
         <CardImgOverlay>
           <Pagination>
@@ -214,7 +216,7 @@ export default function Step() {
       <Container className='m-0 p-0'>
         <CardImg
           alt="Card image cap"
-          src="../multiStepForm/images/bg-sidebar-desktop.svg"
+          src={bgSidebarDesktop}
         />
         <CardImgOverlay className='ps-md-0'>
           <Row>
