@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Steps from './components/Steps';
+import Steps from '../components/Steps';
 
 test('renders img with alt Card image cap', () => {
   render(<Steps />)

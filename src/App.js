@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Steps from './Steps';
-import PersonalInfo from './PersonalInfo';
-import Plan from './Plan';
-import AddOns from './AddOns';
-import FinishingUp from './FinishingUp';
-import Summary from './Summary';
-import '../App.css';
+import Steps from './components/Steps';
+import PersonalInfo from './features/personalInfo/PersonalInfo';
+import Plan from './components/Plan';
+import AddOns from './components/AddOns';
+import FinishingUp from './components/FinishingUp';
+import Summary from './components/Summary';
+import './style/App.css';
 import { Card, Container, Row, Col } from 'reactstrap';
 
 function debounce(fn, ms) {
@@ -44,9 +44,6 @@ export default function App() {
   console.log(window.innerWidth)
   console.log(dimensions.width)
   console.log(dimensions.height)
-  //alert(dimensions.width)
-  //alert(dimensions.height)
-
 
   function isMobile() {
     const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;

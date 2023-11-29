@@ -1,13 +1,16 @@
 import { React, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../style/App.css';
+import iconArcade from '../assets/images/icon-arcade.svg'
+import iconAdvanced from '../assets/images/icon-advanced.svg'
+import iconPro from '../assets/images/icon-pro.svg'
 import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from 'reactstrap';
 
 export default function Plan() {
     const [arcade, setArcade] = useState(true);
     const [advanced, setAdvanced] = useState(false);
     const [pro, setPro] = useState(false);
-    const [formData, setFormData] = useState({ 'arcade': 9 });
+    const [formData, setFormData] = useState({ arcade: 9});
 
     const handleActive = (event) => {
         event.preventDefault();
@@ -60,11 +63,28 @@ export default function Plan() {
         }
     }
 
-    //console.log(formData)
+    const handleSubmit = (e) => {
+        localStorage.setItem("plan", JSON.stringify(formData));
+    }
 
-    useEffect(() => {
-        window.localStorage.setItem("plan", JSON.stringify(formData));
-    }, [formData]);
+    // useEffect(() => {
+        
+    //     // if (defaultData === null ) {
+    //         //setDefaultData({ arcade: 9});
+    //     // } else {
+    //         let planObj = window.localStorage.getItem('plan')
+    //         let parsedObj = JSON.parse(planObj)
+    //     //let planName = Object.keys(parsedObj)[0].charAt(0).toUpperCase() + Object.keys(parsedObj)[0].slice(1);
+    //     //let planPrice = Object.values(parsedObj)[0]
+    //     setDefaultData(parsedObj);
+    //     // }
+    // }, []);
+
+    // useEffect(() => {
+    //     window.localStorage.setItem("plan", JSON.stringify(formData));
+    // }, [formData]);
+
+    console.log(formData)
 
     const createRows = () => {
         if (window.innerWidth <= 576) {
@@ -163,7 +183,7 @@ export default function Plan() {
                                 <img
                                     id='arcade'
                                     alt="icon-arcade"
-                                    src="../multiStepForm/images/icon-arcade.svg"
+                                    src={iconArcade}
                                 />
                             </Container>
                             <Container id='arcade' className='pt-xl-5 pt-lg-5 pt-md-4 ps-2 text-start'>
@@ -184,7 +204,7 @@ export default function Plan() {
                                 <img
                                     id='advanced'
                                     alt="icon-advanced"
-                                    src="../multiStepForm/images/icon-advanced.svg"
+                                    src={iconAdvanced}
                                 />
                             </Container>
                             <Container id='advanced' className='pt-xl-5 pt-lg-5 pt-md-4 ps-2 text-start'>
@@ -205,7 +225,7 @@ export default function Plan() {
                                 <img
                                     id='pro'
                                     alt="icon-pro"
-                                    src="../multiStepForm/images/icon-pro.svg"
+                                    src={iconPro}
                                 />
                             </Container>
                             <Container id='pro' className='pt-xl-5 pt-lg-5 pt-md-4 ps-2 text-start'>
@@ -251,7 +271,7 @@ export default function Plan() {
                         </Button>
                     </Col>
                     <Col className='col-6 col-sm-6 col-md-3 pe-0 nextBtnCol'>
-                        <Button className='nextBtn'>
+                        <Button className='nextBtn' onClick={(e) => handleSubmit(e)}>
                             <Link to="/addOns">
                                 Next Step
                             </Link>

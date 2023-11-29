@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../style/App.css';
 import { Button, Col, Form, FormGroup, Input, Row } from 'reactstrap';
 
 export default function AddOns() {
@@ -9,9 +9,12 @@ export default function AddOns() {
     const [box3, setBox3] = useState(false);
     const [formData, setFormData] = useState({});
 
+    //let addOnsObj = window.localStorage.getItem('addOns')
+    //let parsedObj = JSON.parse(addOnsObj)
+    //const [formData, setFormData] = useState(parsedObj);
+
     const handleActive = (event) => {
         let id = event.target.id
-
         let keyValue = ''
         if (id === 'box1') {
             keyValue = 'Online service'
@@ -63,9 +66,13 @@ export default function AddOns() {
         }
     }
 
-    useEffect(() => {
+    const handleSubmit = (e) => {
         localStorage.setItem("addOns", JSON.stringify(formData));
-    }, [formData]);
+    }
+
+    // useEffect(() => {
+    //     localStorage.setItem("addOns", JSON.stringify(formData));
+    // }, [formData]);
 
     return (
         <Form className='pt-xl-5 pb-xl-0 px-xl-5 mx-xl-5 pt-lg-3 pb-lg-0 px-lg-4 mx-lg-3 pt-md-3 pb-md-0 px-md-3 mx-md-0 h-100'>
@@ -159,7 +166,7 @@ export default function AddOns() {
                     </Button>
                 </Col>
                 <Col className='col-6 col-sm-6 col-md-3 pe-0 nextBtnCol'>
-                    <Button className='nextBtn'>
+                    <Button className='nextBtn' onClick={(e) => handleSubmit(e)}>
                         <Link to="/finishingUp">
                             Next Step
                         </Link>

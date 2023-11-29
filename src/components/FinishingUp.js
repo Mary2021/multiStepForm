@@ -1,6 +1,6 @@
 import { React } from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../style/App.css';
 import { Button, Col, Container, Form, FormGroup, Row } from 'reactstrap';
 
 export default function FinishingUp() {
