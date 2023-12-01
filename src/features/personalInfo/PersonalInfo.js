@@ -56,6 +56,10 @@ export default function Info() {
     dispatch(setPhone( phoneData ))
   }
 
+  const handleSubmit = (e) => {
+    localStorage.setItem("form", JSON.stringify(form));
+}
+
   return (
     <Form className='pt-xl-5 pb-xl-0 px-xl-5 mx-xl-5 pt-lg-3 pb-lg-0 px-lg-4 mx-lg-3 pt-md-3 pb-md-0 px-md-3 mx-md-0 h-100'>
       <h2 className='formTitle'>Personal info</h2>
@@ -128,7 +132,7 @@ export default function Info() {
         </FormFeedback>
       </FormGroup>
       <FormGroup className='nextBtnCol pt-5 rmMb'>
-        <Button className='nextBtn' disabled={!enabled}>
+        <Button className='nextBtn' disabled={!enabled} onClick={(e) => handleSubmit(e)}>
             <Link to="/plan">
               Next Step
             </Link>
