@@ -1,4 +1,3 @@
-//lae info localStoragest
 export const loadState = () => {
     try {
       const serialState = localStorage.getItem('appState');
@@ -11,7 +10,6 @@ export const loadState = () => {
     }
 };
 
-//salvesta info localStoragesse
 export const saveState = (state) => {
     try {
       const serialState = JSON.stringify(state);

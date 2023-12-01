@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Steps from './components/Steps';
 import PersonalInfo from './features/personalInfo/PersonalInfo';
-import Plan from './components/Plan';
+import Plan from './features/plan/Plan';
 import AddOns from './components/AddOns';
 import FinishingUp from './components/FinishingUp';
 import Summary from './components/Summary';

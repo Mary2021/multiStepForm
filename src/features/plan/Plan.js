@@ -1,70 +1,74 @@
-import { React, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import '../style/App.css';
-import iconArcade from '../assets/images/icon-arcade.svg'
-import iconAdvanced from '../assets/images/icon-advanced.svg'
-import iconPro from '../assets/images/icon-pro.svg'
+import '../../style/App.css';
+import iconArcade from '../../assets/images/icon-arcade.svg'
+import iconAdvanced from '../../assets/images/icon-advanced.svg'
+import iconPro from '../../assets/images/icon-pro.svg'
 import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from 'reactstrap';
+import { useDispatch, useSelector } from "react-redux";
+import { setSelected, setArcade, setAdvanced, setPro } from './planSlice';
 
 export default function Plan() {
-    const [arcade, setArcade] = useState(true);
-    const [advanced, setAdvanced] = useState(false);
-    const [pro, setPro] = useState(false);
-    const [formData, setFormData] = useState({ arcade: 9});
+    const dispatch = useDispatch()
+    const selected = useSelector(state => state.plan.selected);
+    const arcade = useSelector(state => state.plan.arcade);
+    const advanced = useSelector(state => state.plan.advanced);
+    const pro = useSelector(state => state.plan.pro);
 
-    const handleActive = (event) => {
-        event.preventDefault();
-        let id = event.target.id
-        let value = ''
+    const handleActive = (e) => {
+        e.preventDefault();
+        let id = e.target.id
+        let price = ''
         if (id === 'arcade') {
-            value = 9
+            price = 9
         }
         if (id === 'advanced') {
-            value = 12
+            price = 12
         }
         if (id === 'pro') {
-            value = 15
+            price = 15
         }
 
         if (id === 'arcade') {
             if (arcade === true) {
-                setArcade(!arcade);
+                dispatch(setArcade(!arcade))
             }
+
             if (arcade === false) {
-                setFormData({ [event.target.id]: value });
-                setAdvanced(false);
-                setPro(false);
-                setArcade(!arcade);
+                dispatch(setSelected({ arcade: price }))
+                dispatch(setArcade(!arcade))
+                dispatch(setAdvanced(false))
+                dispatch(setPro(false))
             }
         }
 
         if (id === 'advanced') {
             if (advanced === true) {
-                setAdvanced(!advanced);
+                dispatch(setAdvanced(!advanced))
             }
             if (advanced === false) {
-                setFormData({ [event.target.id]: value });
-                setArcade(false);
-                setPro(false);
-                setAdvanced(!advanced);
+                dispatch(setSelected({ advanced: price }))
+                dispatch(setAdvanced(!advanced))
+                dispatch(setArcade(false))
+                dispatch(setPro(false))
             }
         }
 
         if (id === 'pro') {
             if (pro === true) {
-                setPro(!pro);
+                dispatch(setPro(!pro))
             }
             if (pro === false) {
-                setFormData({ [event.target.id]: value });
-                setArcade(false);
-                setAdvanced(false);
-                setPro(!pro);
+                dispatch(setSelected({ pro: price }))
+                dispatch(setPro(!pro))
+                dispatch(setArcade(false))
+                dispatch(setAdvanced(false))
             }
         }
     }
 
-    const handleSubmit = (e) => {
-        localStorage.setItem("plan", JSON.stringify(formData));
+    const handleSubmit = () => {
+        localStorage.setItem("plan", JSON.stringify(selected));
     }
 
     const createRows = () => {
@@ -74,7 +78,7 @@ export default function Plan() {
                     <Button
                         id='arcade'
                         active={arcade}
-                        onClick={handleActive}
+                        onClick={(e) => handleActive(e)}
                         className='planBtn'
                         outline
                     >
@@ -84,7 +88,7 @@ export default function Plan() {
                                     <img
                                         id='arcade'
                                         alt="icon-arcade"
-                                        src="../multiStepForm/images/icon-arcade.svg"
+                                        src={iconArcade}
                                     />
                                 </Container>
                             </Col>
@@ -99,7 +103,7 @@ export default function Plan() {
                     <Button
                         id='advanced'
                         active={advanced}
-                        onClick={handleActive}
+                        onClick={(e) => handleActive(e)}
                         className='planBtn'
                         outline
                     >
@@ -109,7 +113,7 @@ export default function Plan() {
                                     <img
                                         id='advanced'
                                         alt="icon-advanced"
-                                        src="../multiStepForm/images/icon-advanced.svg"
+                                        src={iconAdvanced}
                                     />
                                 </Container>
                             </Col>
@@ -124,7 +128,7 @@ export default function Plan() {
                     <Button
                         id='pro'
                         active={pro}
-                        onClick={handleActive}
+                        onClick={(e) => handleActive(e)}
                         className='planBtn'
                         outline
                     >
@@ -134,7 +138,7 @@ export default function Plan() {
                                     <img
                                         id='pro'
                                         alt="icon-pro"
-                                        src="../multiStepForm/images/icon-pro.svg"
+                                        src={iconPro}
                                     />
                                 </Container>
                             </Col>
@@ -156,7 +160,7 @@ export default function Plan() {
                         <Button
                             id='arcade'
                             active={arcade}
-                            onClick={handleActive}
+                            onClick={(e) => handleActive(e)}
                             className='planBtn'
                             outline
                         >
@@ -177,7 +181,7 @@ export default function Plan() {
                         <Button
                             id='advanced'
                             active={advanced}
-                            onClick={handleActive}
+                            onClick={(e) => handleActive(e)}
                             className='planBtn'
                             outline
                         >
@@ -198,7 +202,7 @@ export default function Plan() {
                         <Button
                             id='pro'
                             active={pro}
-                            onClick={handleActive}
+                            onClick={(e) => handleActive(e)}
                             className='planBtn'
                             outline
                         >
@@ -218,7 +222,6 @@ export default function Plan() {
                 </Row>
             )
         }
-
     }
 
     return (
@@ -239,11 +242,11 @@ export default function Plan() {
                     <Col className='col-6 ps-4 text-start'>
                         <Label for='id-1' className='mb-0'>Yearly</Label>
                     </Col>
-                    
+
                 </Row>
             </FormGroup>
             <FormGroup check className='ps-0 mt-2'>
-                <Row className='pe-2'> 
+                <Row className='pe-2'>
                     <Col className='col-6 col-sm-6 col-md-3 ps-0 backBtnCol'>
                         <Button className='backBtn'>
                             <Link className='backLink' to="/">
