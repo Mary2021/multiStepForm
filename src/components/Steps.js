@@ -172,7 +172,7 @@ export default function Step() {
           listItems
         )
       }
-      if (window.location.pathname === '/multiStepForm/finishingUp') {
+      if (window.location.pathname === '/multiStepForm/finishingUp' || window.location.pathname === '/multiStepForm/summary') {
         const listItems = list.map((item, index) =>
           (index === 3) ?
             (

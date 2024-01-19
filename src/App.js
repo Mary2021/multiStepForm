@@ -210,7 +210,6 @@ function FinishUp() {
   }
 }
 
-
 function Sum() {
   if (window.innerWidth <= 576) {
     return (

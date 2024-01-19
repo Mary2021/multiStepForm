@@ -20,16 +20,15 @@ const addOnsSlice = createSlice({
         },
         setBox3: (state, action) => {
             state.box3 = action.payload;
-        },
+        }
     }
-
 });
 
 export const { 
     setSelected,
     setBox1,
     setBox2,
-    setBox3
+    setBox3,
 } = addOnsSlice.actions;
 
 export default addOnsSlice.reducer;

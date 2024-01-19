@@ -11,6 +11,8 @@ export default function AddOns() {
     const box1 = useSelector(state => state.addOns.box1);
     const box2 = useSelector(state => state.addOns.box2);
     const box3 = useSelector(state => state.addOns.box3);
+    const toggle = useSelector(state => state.plan.toggle);
+    let prices = [1, 2, 2]
 
     const handleActive = (e) => {
         let id = e.target.id
@@ -35,17 +37,33 @@ export default function AddOns() {
 
         if (id === 'box1') {
             if (box1 === false) {
-                dispatch(setSelected({ ...selected, 'Online service': 1 }))
+                if (toggle === true) {
+                    dispatch(setSelected({ ...selected, 'Online service': prices[0] }))
+                }
+                if (toggle === false) {
+                    dispatch(setSelected({ ...selected, 'Online service': prices[0] * 10 }))
+                }
                 dispatch(setBox1(!box1))
             }
             if (box1 === true) {
+                if (toggle === true) {
+                    dispatch(setSelected({ ...selected, 'Online service': prices[0] }))
+                }
+                if (toggle === false) {
+                    dispatch(setSelected({ ...selected, 'Online service': prices[0] * 10 }))
+                }
                 dispatch(setSelected(selectedAddons))
                 dispatch(setBox1(!box1))
             }
         }
         if (id === 'box2') {
             if (box2 === false) {
-                dispatch(setSelected({ ...selected, 'Larger storage': 2 }))
+                if (toggle === true) {
+                    dispatch(setSelected({ ...selected, 'Larger storage': prices[1] }))
+                }
+                if (toggle === false) {
+                    dispatch(setSelected({ ...selected, 'Larger storage': prices[1] * 10 }))
+                }
                 dispatch(setBox2(!box2))
             }
             if (box2 === true) {
@@ -55,7 +73,13 @@ export default function AddOns() {
         }
         if (id === 'box3') {
             if (box3 === false) {
-                dispatch(setSelected({ ...selected, 'Customizable profile': 2 }))
+                if (toggle === true) {
+                    dispatch(setSelected({ ...selected, 'Customizable profile': prices[2] }))
+                }
+                if (toggle === false) {
+                    dispatch(setSelected({ ...selected, 'Customizable profile': prices[2] * 10 }))
+                }
+
                 dispatch(setBox3(!box3))
             }
             if (box3 === true) {
@@ -66,7 +90,52 @@ export default function AddOns() {
     }
 
     const handleSubmit = (e) => {
+        if (box1 === false & box2 === false & box3 === false) {
+            dispatch(setSelected({}))
+        }
         localStorage.setItem("addOns", JSON.stringify(selected));
+    }
+
+    const arcText = () => {
+        document.getElementById('arcade')
+        let num = ''
+        let txt = ''
+        if (toggle === false) {
+            num = prices[0] * 10
+            txt = num + '/yr'
+        } else {
+            num = prices[0]
+            txt = num + '/mo'
+        }
+        return txt
+    }
+
+    const advText = () => {
+        document.getElementById('advanced')
+        let num = ''
+        let txt = ''
+        if (toggle === false) {
+            num = prices[1] * 10
+            txt = num + '/yr'
+        } else {
+            num = prices[1]
+            txt = num + '/mo'
+        }
+        return txt
+    }
+
+    const proText = () => {
+        document.getElementById('pro')
+        let num = ''
+        let txt = ''
+        if (toggle === false) {
+            num = prices[2] * 10
+            txt = num + '/yr'
+        } else {
+            num = prices[2]
+            txt = num + '/mo'
+        }
+        return txt
     }
 
     return (
@@ -98,7 +167,7 @@ export default function AddOns() {
                                 <p className='mb-xl-4 mb-lg-3 mb-md-1 mb-0 text-start'>Access to multiplayer games</p>
                             </Col>
                             <Col className='col-3 col-sm-3 px-0'>
-                                <p>+$1/mo</p>
+                                <p>+${arcText()}</p>
                             </Col>
                         </Row>
                     </Button>
@@ -125,7 +194,7 @@ export default function AddOns() {
                                 <p className='mb-xl-4 mb-lg-3 mb-md-1 mb-0 text-start'>Extra 1TB of cloud save</p>
                             </Col>
                             <Col className='col-3 col-sm-3 px-0'>
-                                <p>+$2/mo</p>
+                                <p>+${advText()}</p>
                             </Col>
                         </Row>
                     </Button>
@@ -152,7 +221,7 @@ export default function AddOns() {
                                 <p className='mb-xl-4 mb-lg-3 mb-md-1 mb-0 text-start'>Custom theme on your profile</p>
                             </Col>
                             <Col className='col-3 col-sm-3 px-0'>
-                                <p>+$2/mo</p>
+                                <p>+${proText()}</p>
                             </Col>
                         </Row>
                     </Button>
