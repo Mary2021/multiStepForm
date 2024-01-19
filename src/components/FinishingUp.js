@@ -2,34 +2,62 @@ import { React } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/App.css';
 import { Button, Col, Container, Form, FormGroup, Row } from 'reactstrap';
+import { useSelector } from "react-redux";
 
 export default function FinishingUp() {
-    //get selected plan from localStorage
-    let planObj = window.localStorage.getItem('plan')
-    let parsedObj = JSON.parse(planObj)
-    let planName = Object.keys(parsedObj)[0].charAt(0).toUpperCase() + Object.keys(parsedObj)[0].slice(1);
-    let planPrice = Object.values(parsedObj)[0]
-
-    //get selected addOns from localStorage and generate rows with that data
-    let addOnsObj = window.localStorage.getItem('addOns')
-    let parsedObj2 = JSON.parse(addOnsObj)
-
-    //sum object.values to get total price
-    const sumValues = Object.values(parsedObj2).reduce((a, b) => a + b, 0);
+    const toggle = useSelector(state => state.plan.toggle)
+    const selectedPlan = useSelector(state => state.plan.selected)
+    const selectedAddOns = useSelector(state => state.addOns.selected)
+    const planName = Object.keys(selectedPlan)[0].charAt(0).toUpperCase() + Object.keys(selectedPlan)[0].slice(1);
+    const planPrice = Object.values(selectedPlan)[0]
+    const sumValues = Object.values(selectedAddOns).reduce((a, b) => a + b, 0);
     let totalPrice = planPrice + sumValues
 
     const generateAddOnsRow = () => {
         return (
-            Object.entries(parsedObj2).map(([key, value]) => (
+            Object.entries(selectedAddOns).map(([key, value]) => (
                 <Row key={key + '1'} className='justify-content-center px-3 pt-1'>
                     <Col className='col-8 col-md-9 ps-0 pe-md-5 pe-0 text-start'>
                         <p className='formText mb-2'>{key}</p>
                     </Col>
                     <Col className='col-4 col-md-3 ps-md-2 ps-0 pe-md-2 pe-0 text-end'>
-                        <p className='formText mb-2'>+${value}/mo</p>
+                        <p className='formText mb-2'>+${value}{shortText()}</p>
                     </Col>
                 </Row>))
         )
+    }
+
+    const createText = () => {
+        let txt = ''
+        if (toggle === true) {
+            txt = 'Monthly'
+        }
+        if (toggle === false) {
+            txt = 'Yearly'
+        }
+        return txt
+    }
+
+    const createTotalText = () => {
+        let totalTxt = ''
+        if (toggle === true) {
+            totalTxt = 'per month'
+        }
+        if (toggle === false) {
+            totalTxt = 'per year'
+        }
+        return totalTxt
+    }
+
+    const shortText = () => {
+        let shortTxt = ''
+        if (toggle === true) {
+            shortTxt = '/mo'
+        }
+        if (toggle === false) {
+            shortTxt = '/yr'
+        }
+        return shortTxt
     }
 
     return (
@@ -42,10 +70,10 @@ export default function FinishingUp() {
                 <Container className='planToggle justify-content-center'>
                     <Row className='justify-content-center px-3'>
                         <Col className='col-8 col-md-9 ps-0 pe-md-5 pe-0 text-start border-bottom'>
-                            <p className='formText'>{planName} (Monthly) <br></br><Link className='backLink' to="/plan">Change</Link></p>
+                            <p className='formText'>{planName} ({createText()})<br></br><Link className='backLink' to="/plan">Change</Link></p>
                         </Col>
                         <Col className='col-4 col-md-3 ps-md-2 ps-0 pe-md-2 pe-0 text-end border-bottom'>
-                            <p className='formText'>${planPrice}/mo</p>
+                            <p className='formText'>${planPrice}{shortText()}</p>
                         </Col>
                     </Row>
                     {generateAddOnsRow()}
@@ -55,10 +83,10 @@ export default function FinishingUp() {
                 <Container className='justify-content-center'>
                     <Row className='justify-content-center px-3 pt-2'>
                         <Col className='col-8 col-md-9 ps-0 pe-md-5 pe-0'>
-                            <p className='formText'>Total (per month)</p>
+                            <p className='formText'>Total ({createTotalText()})</p>
                         </Col>
                         <Col className='col-4 col-md-3 ps-md-2 ps-0 pe-md-2 pe-0 text-end'>
-                            <p className='formText'>${totalPrice}/mo</p>
+                            <p className='formText'>${totalPrice}{shortText()}</p>
                         </Col>
                     </Row>
                 </Container>
