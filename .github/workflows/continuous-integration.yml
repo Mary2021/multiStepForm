@@ -1,17 +1,24 @@
-name: Continuous Integration
+name: Continuouse Deployment to github pages
 on:
   push:
-    branches: [develop]
+    branches:
+      - main
 jobs:
-  buildAndTest:
-    name: Build and Test
-    runs-on: ubuntu-latest    
+  gh-pages-deploy:
+    name: Deploying to gh-pages
+    runs-on: ubuntu-latest
     steps:
+      - name: Setup Node.js for use with actions
+        uses: actions/setup-node@v3
+        with:
+          version:  18.x
       - name: Checkout branch
         uses: actions/checkout@v3
+
       - name: Clean install dependencies
         run: npm ci
-      - name: Run build script
-        run: npm run build
-      - name: Run test script
-        run: npm run test --watchAll=false
+
+      - name: Run deploy script
+        run: |
+          git config user.name "Mary" && git config user.email "mary.pommer@tptlive.ee"
+          npm run gh-pages-deploy
